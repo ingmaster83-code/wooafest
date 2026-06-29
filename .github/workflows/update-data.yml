@@ -24,6 +24,7 @@ jobs:
         run: python scripts/fetch_data.py
         env:
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+          CULTURE_API_KEY: ${{ secrets.CULTURE_API_KEY }}
 
       - name: 페이지 생성
         run: python scripts/generate_pages.py

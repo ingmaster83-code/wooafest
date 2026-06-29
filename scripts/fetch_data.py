@@ -12,7 +12,9 @@ import urllib.request
 import urllib.parse
 
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
+CULTURE_API_KEY = os.environ.get('CULTURE_API_KEY', '')
 BASE_URL = 'https://apis.data.go.kr/B553457/cultureinfo'
+CULTURE_BASE_URL = 'https://api.kcisa.kr/openapi/CNV_060/request'
 DATA_DIR = Path(__file__).parent.parent / 'data' / 'culture'
 
 REGIONS = ['서울', '경기', '인천', '부산', '대구', '광주', '대전', '울산', '세종',
@@ -29,6 +31,13 @@ REALMS = {
     '축제': 'A', '공연': 'B', '전시': 'D', '교육체험': 'G',
     '아동가족': 'E', '체육': 'H', '연극': 'B01', '음악': 'B02',
     '국악': 'B04', '무용': 'B03', '뮤지컬': 'B05', '오페라': 'B06'
+}
+
+# 새 문화예술공연(통합) API의 dtype 매핑
+CULTURE_DTYPES = {
+    '공연': '공연', '전시': '전시', '연극': '연극', '뮤지컬': '뮤지컬',
+    '음악': '음악', '국악': '국악', '무용': '무용', '오페라': '오페라',
+    '아동가족': '기타', '교육체험': '기타', '체육': '기타'
 }
 
 
@@ -149,14 +158,55 @@ def fetch_by_region():
         time.sleep(0.5)
 
 
+def fetch_culture_xml(params):
+    params['serviceKey'] = CULTURE_API_KEY
+    params.setdefault('numOfRows', '100')
+    params.setdefault('pageNo', '1')
+    url = CULTURE_BASE_URL + '?' + urllib.parse.urlencode(params)
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return resp.read().decode('utf-8')
+    except Exception as e:
+        print(f"  ⚠️  culture API fetch 실패: {e}")
+        return None
+
+
+def normalize_culture_item(item, realm):
+    raw_period = item.get('eventPeriod', '')
+    start, end = '', ''
+    if '~' in raw_period:
+        parts = raw_period.split('~')
+        start = parts[0].strip().replace('-', '').replace(' ', '')
+        end = parts[1].strip().replace('-', '').replace(' ', '')
+    return {
+        'seq': '',
+        'title': item.get('title', ''),
+        'place': item.get('eventSite', ''),
+        'startDate': start,
+        'endDate': end,
+        'fee': item.get('charge', ''),
+        'realm': realm,
+        'area': '',
+        'lat': '',
+        'lng': '',
+        'thumbnail': item.get('imageObject', ''),
+        'phone': item.get('contactPoint', ''),
+        'url': item.get('url', '')
+    }
+
+
 def fetch_by_realm():
     print("\n📥 분야별 행사 수집 중...")
-    for realm, code in REALMS.items():
-        print(f"  → {realm} ({code})")
+    year = str(datetime.now().year)
+
+    # 기존 API로 축제만 수집
+    for realm in ['축제']:
+        code = REALMS[realm]
+        print(f"  → {realm} (기존 API)")
         params = {'realmCode': code}
         xml = fetch_xml('realm2', params)
         items = [normalize_item(i) for i in parse_items(xml)]
-
         out = DATA_DIR / 'by_realm' / f'{realm}.json'
         existing = []
         if out.exists():
@@ -164,14 +214,33 @@ def fetch_by_realm():
                 existing = json.loads(out.read_text('utf-8')).get('items', [])
             except Exception:
                 pass
-
-        save_json(out, {
-            'updated': datetime.now().isoformat(),
-            'realm': realm,
-            'total': len(items),
-            'items': items if items else existing
-        })
+        save_json(out, {'updated': datetime.now().isoformat(), 'realm': realm, 'total': len(items), 'items': items if items else existing})
         time.sleep(0.5)
+
+    if not CULTURE_API_KEY:
+        print("  ⚠️  CULTURE_API_KEY 없음, 공연/전시 분야 수집 건너뜀")
+        return
+
+    # 새 API로 공연/전시 등 수집
+    done_dtypes = {}
+    for realm, dtype in CULTURE_DTYPES.items():
+        print(f"  → {realm} (문화예술API, dtype={dtype})")
+        # 같은 dtype이면 캐시 사용
+        if dtype not in done_dtypes:
+            params = {'dtype': dtype, 'title': '공연' if dtype == '공연' else year, 'numOfRows': '200'}
+            xml = fetch_culture_xml(params)
+            raw = parse_items(xml)
+            done_dtypes[dtype] = [normalize_culture_item(i, dtype) for i in raw]
+        items = done_dtypes[dtype]
+        out = DATA_DIR / 'by_realm' / f'{realm}.json'
+        existing = []
+        if out.exists():
+            try:
+                existing = json.loads(out.read_text('utf-8')).get('items', [])
+            except Exception:
+                pass
+        save_json(out, {'updated': datetime.now().isoformat(), 'realm': realm, 'total': len(items), 'items': items if items else existing})
+        time.sleep(0.3)
 
 
 if __name__ == '__main__':
