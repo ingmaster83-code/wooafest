@@ -58,6 +58,11 @@ function renderCalendar() {
     const dayEvents = calEvents.filter(ev => {
       const s = (ev.startDate || ev['시작일자'] || ev['축제시작일자'] || '').toString().replace(/\D/g,'');
       const e = (ev.endDate || ev['종료일자'] || ev['축제종료일자'] || '').toString().replace(/\D/g,'');
+      if (!s) return false;
+      // 단기 행사(7일 이하): 기간 내 모든 날 표시
+      // 장기 행사(8일 이상): 시작일에만 표시
+      const duration = e && s ? (new Date(e.slice(0,4),e.slice(4,6)-1,e.slice(6,8)) - new Date(s.slice(0,4),s.slice(4,6)-1,s.slice(6,8))) / 86400000 : 0;
+      if (duration > 7) return s === dateStr;
       return s <= dateStr && e >= dateStr;
     });
 

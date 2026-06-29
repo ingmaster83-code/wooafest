@@ -385,6 +385,8 @@ ins.adsbygoogle { display: none !important; }
   padding: 6px;
   cursor: pointer;
   transition: background 0.2s;
+  min-width: 0;
+  overflow: hidden;
 }
 .cal-day:hover { background: var(--primary-light); }
 .cal-day.today { background: #FEF3C7; }
