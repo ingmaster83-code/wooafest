@@ -33,11 +33,12 @@ REALMS = {
     '국악': 'B04', '무용': 'B03', '뮤지컬': 'B05', '오페라': 'B06'
 }
 
-# 새 문화예술공연(통합) API의 dtype 매핑
+# 새 문화예술공연(통합) API의 dtype 매핑 (유효값: 연극,뮤지컬,오페라,음악,콘서트,국악,무용,전시,기타)
 CULTURE_DTYPES = {
-    '공연': '공연', '전시': '전시', '연극': '연극', '뮤지컬': '뮤지컬',
-    '음악': '음악', '국악': '국악', '무용': '무용', '오페라': '오페라',
-    '아동가족': '기타', '교육체험': '기타', '체육': '기타'
+    '전시': ['전시'], '연극': ['연극'], '뮤지컬': ['뮤지컬'],
+    '음악': ['음악', '콘서트'], '국악': ['국악'], '무용': ['무용'], '오페라': ['오페라'],
+    '아동가족': ['기타'], '교육체험': ['기타'], '체육': ['기타'],
+    '공연': ['연극', '뮤지컬', '음악', '콘서트', '무용', '오페라', '국악'],  # 공연 = 여러 dtype 합산
 }
 
 
@@ -223,15 +224,17 @@ def fetch_by_realm():
 
     # 새 API로 공연/전시 등 수집
     done_dtypes = {}
-    for realm, dtype in CULTURE_DTYPES.items():
-        print(f"  → {realm} (문화예술API, dtype={dtype})")
-        # 같은 dtype이면 캐시 사용
-        if dtype not in done_dtypes:
-            params = {'dtype': dtype, 'title': '공연' if dtype == '공연' else year, 'numOfRows': '200'}
-            xml = fetch_culture_xml(params)
-            raw = parse_items(xml)
-            done_dtypes[dtype] = [normalize_culture_item(i, dtype) for i in raw]
-        items = done_dtypes[dtype]
+    for realm, dtypes in CULTURE_DTYPES.items():
+        print(f"  → {realm} (문화예술API, dtype={dtypes})")
+        items = []
+        for dtype in dtypes:
+            if dtype not in done_dtypes:
+                params = {'dtype': dtype, 'title': year, 'numOfRows': '200'}
+                xml = fetch_culture_xml(params)
+                raw = parse_items(xml)
+                done_dtypes[dtype] = [normalize_culture_item(i, dtype) for i in raw]
+                time.sleep(0.3)
+            items += done_dtypes[dtype]
         out = DATA_DIR / 'by_realm' / f'{realm}.json'
         existing = []
         if out.exists():
