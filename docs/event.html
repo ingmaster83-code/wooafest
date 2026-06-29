@@ -7,6 +7,13 @@
 <meta name="description" id="pageDesc" content="전국 축제·공연·행사 상세 정보 | 우아축제 — 전국 문화행사 정보 한눈에">
 <meta name="kakao-key" content="78e249ab403b2955e4ca71e71f658549">
 <link rel="stylesheet" href="css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -45,7 +52,9 @@
     <div class="detail-card" id="mapCard" style="display:none">
       <h2 style="font-size:1rem;font-weight:700;margin-bottom:8px">📍 위치</h2>
       <div id="map"></div>
-      <button onclick="openNav()" style="margin-top:12px;padding:8px 20px;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem">길찾기 →</button>
+      <div style="text-align:center;margin-top:12px">
+        <button onclick="openParking()" style="padding:10px 24px;background:#10B981;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem;font-weight:600">🅿️ 근처 주차장 확인 →</button>
+      </div>
     </div>
 
     <!-- 중간 광고 -->
@@ -270,9 +279,6 @@ function renderDetail() {
   if(lat && lng) {
     document.getElementById('ecoCard').style.display = '';
     document.getElementById('ecoLinks').innerHTML = `
-      <a href="https://wooaparking.wooahouse.com/?lat=${lat}&lng=${lng}" target="_blank" class="ecosystem-card">
-        <span class="eco-icon">🅿️</span><span class="eco-title">근처 공영주차장</span><span class="eco-link">WooaParking →</span>
-      </a>
       <a href="https://wooakids.wooahouse.com" target="_blank" class="ecosystem-card">
         <span class="eco-icon">🧒</span><span class="eco-title">아이랑 관광지</span><span class="eco-link">WooaKids →</span>
       </a>
@@ -302,12 +308,11 @@ function loadKakaoMap(lat, lng, title) {
   document.head.appendChild(script);
 }
 
-function openNav() {
+function openParking() {
   if(!evData) return;
   const lat = evData.lat||evData['위도']||'';
   const lng = evData.lng||evData['경도']||'';
-  const title = evData.title||evData['행사명']||evData['축제명']||'';
-  if(lat && lng) window.open(`https://map.kakao.com/link/to/${encodeURIComponent(title)},${lat},${lng}`, '_blank');
+  if(lat && lng) window.open(`https://wooaparking.wooahouse.com/?lat=${lat}&lng=${lng}`, '_blank');
 }
 
 (adsbygoogle=window.adsbygoogle||[]).push({});
