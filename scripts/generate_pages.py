@@ -124,9 +124,14 @@ def event_card_html(ev, idx):
 
 def header_html(active=''):
     return '''<header class="site-header">
-  <a href="/" class="site-logo"><span>🎪</span>우아축제</a>
-  <div class="header-search"><button>🔍</button><input type="text" placeholder="행사명, 지역 검색..."></div>
-  <nav class="header-nav"><a href="/calendar.html">캘린더</a><a href="/지역/서울.html">지역별</a><a href="/분야/축제.html">분야별</a></nav>
+  <div class="site-header-inner">
+    <a href="/" class="site-logo"><span>🎪</span>우아축제</a>
+    <nav class="header-nav">
+      <a href="/calendar.html">문화캘린더</a>
+      <a href="/지역/서울.html">지역별</a>
+      <a href="/분야/축제.html">분야별</a>
+    </nav>
+  </div>
 </header>'''
 
 
@@ -210,6 +215,7 @@ def generate_region_page(region):
 <meta property="og:site_name" content="우아축제">
 <meta property="og:description" content="{region} 축제, 공연, 전시, 문화행사 정보 총정리.">
 <link rel="stylesheet" href="../css/style.css">
+<style>ins.adsbygoogle{{display:none!important}}</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -339,6 +345,7 @@ def generate_realm_page(realm):
 <meta property="og:title" content="{seo_title} | 우아축제">
 <meta property="og:site_name" content="우아축제">
 <link rel="stylesheet" href="../css/style.css">
+<style>ins.adsbygoogle{{display:none!important}}</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 </head>
 <body>
