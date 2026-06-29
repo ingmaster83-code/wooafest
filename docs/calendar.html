@@ -16,20 +16,19 @@
   gtag('config', 'G-9ZGENFSXWC');
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<style>ins.adsbygoogle{display:none!important}.ad-top,.ad-middle{display:none!important}</style>
 </head>
 <body>
 
 <header class="site-header">
-  <a href="/" class="site-logo"><span>🎪</span>우아축제</a>
-  <div class="header-search">
-    <button>🔍</button>
-    <input type="text" placeholder="행사명, 지역 검색...">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo"><span>🎪</span>우아축제</a>
+    <nav class="header-nav">
+      <a href="calendar.html" style="color:#fff">문화캘린더</a>
+      <a href="지역/서울.html">지역별</a>
+      <a href="분야/축제.html">분야별</a>
+    </nav>
   </div>
-  <nav class="header-nav">
-    <a href="calendar.html" style="color:#fff">캘린더</a>
-    <a href="지역/서울.html">지역별</a>
-    <a href="분야/축제.html">분야별</a>
-  </nav>
 </header>
 
 <div class="ad-top">
@@ -55,7 +54,7 @@
       <span><span style="background:#FEE2E2;color:#DC2626;padding:2px 8px;border-radius:8px">⚽ 체육</span></span>
     </div>
 
-    <div class="cal-grid">
+    <div class="cal-day-headers" style="display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-bottom:none;border-radius:8px 8px 0 0;overflow:hidden">
       <div class="cal-day-header">일</div>
       <div class="cal-day-header">월</div>
       <div class="cal-day-header">화</div>
@@ -63,8 +62,8 @@
       <div class="cal-day-header">목</div>
       <div class="cal-day-header">금</div>
       <div class="cal-day-header">토</div>
-      <div id="calGrid" style="display:contents"></div>
     </div>
+    <div class="cal-grid" id="calGrid"></div>
   </div>
 </div>
 
