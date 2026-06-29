@@ -276,20 +276,29 @@ function renderDetail() {
     loadKakaoMap(lat, lng, title);
   }
 
-  // 생태계 연동
-  if(lat && lng) {
-    document.getElementById('ecoCard').style.display = '';
-    document.getElementById('ecoLinks').innerHTML = `
-      <a href="https://wooakids.wooahouse.com" target="_blank" class="ecosystem-card">
-        <span class="eco-icon">🧒</span><span class="eco-title">아이랑 관광지</span><span class="eco-link">WooaKids →</span>
-      </a>
-      <a href="https://wooacamp.wooahouse.com" target="_blank" class="ecosystem-card">
-        <span class="eco-icon">🏕️</span><span class="eco-title">근처 캠핑장</span><span class="eco-link">WooaCamp →</span>
-      </a>
-      <a href="https://wooasijang.wooahouse.com" target="_blank" class="ecosystem-card">
-        <span class="eco-icon">🏪</span><span class="eco-title">근처 전통시장</span><span class="eco-link">WooaSijang →</span>
-      </a>`;
+  // 공식 홈페이지 버튼 (url 있을 때)
+  if(homepage) {
+    const urlBtn = document.createElement('div');
+    urlBtn.style.cssText = 'text-align:center;margin:16px 0';
+    urlBtn.innerHTML = `<a href="${escHtml(homepage)}" target="_blank" rel="noopener" style="display:inline-block;padding:10px 28px;background:var(--primary);color:#fff;border-radius:8px;font-weight:600;text-decoration:none;font-size:.9rem">🌐 공식 페이지 바로가기 →</a>`;
+    document.getElementById('detailCard').appendChild(urlBtn);
   }
+
+  // 생태계 연동 (항상 표시)
+  document.getElementById('ecoCard').style.display = '';
+  document.getElementById('ecoLinks').innerHTML = `
+    <a href="https://wooakids.wooahouse.com" target="_blank" class="ecosystem-card">
+      <span class="eco-icon">🧒</span><span class="eco-title">아이랑 관광지</span><span class="eco-link">WooaKids →</span>
+    </a>
+    <a href="https://wooacamp.wooahouse.com" target="_blank" class="ecosystem-card">
+      <span class="eco-icon">🏕️</span><span class="eco-title">근처 캠핑장</span><span class="eco-link">WooaCamp →</span>
+    </a>
+    <a href="https://wooasijang.wooahouse.com" target="_blank" class="ecosystem-card">
+      <span class="eco-icon">🏪</span><span class="eco-title">근처 전통시장</span><span class="eco-link">WooaSijang →</span>
+    </a>
+    <a href="https://wooaparking.wooahouse.com" target="_blank" class="ecosystem-card">
+      <span class="eco-icon">🅿️</span><span class="eco-title">근처 주차장</span><span class="eco-link">WooaParking →</span>
+    </a>`;
 }
 
 function loadKakaoMap(lat, lng, title) {

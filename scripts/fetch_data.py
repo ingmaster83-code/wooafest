@@ -174,12 +174,15 @@ def fetch_culture_xml(params):
 
 
 def normalize_culture_item(item, realm):
+    import re as _re
     raw_period = item.get('eventPeriod', '')
     start, end = '', ''
     if '~' in raw_period:
         parts = raw_period.split('~')
         start = parts[0].strip().replace('-', '').replace(' ', '')
         end = parts[1].strip().replace('-', '').replace(' ', '')
+    raw_desc = item.get('description', '')
+    content = _re.sub(r'<[^>]+>', '', raw_desc).strip() if raw_desc else ''
     return {
         'seq': '',
         'title': item.get('title', ''),
@@ -193,7 +196,8 @@ def normalize_culture_item(item, realm):
         'lng': '',
         'thumbnail': item.get('imageObject', ''),
         'phone': item.get('contactPoint', ''),
-        'url': item.get('url', '')
+        'url': item.get('url', ''),
+        'content': content
     }
 
 
