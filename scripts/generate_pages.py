@@ -542,6 +542,7 @@ def generate_festival_pages():
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../css/style.css">
+<style>ins.adsbygoogle{{display:none!important}}</style>
 </head>
 <body>
 <header class="site-header">
@@ -586,7 +587,7 @@ def generate_festival_pages():
 
     {f'<div class="detail-card"><h2 style="font-size:1rem;font-weight:700;margin-bottom:12px">축제 소개</h2><p style="line-height:1.8;color:var(--text-secondary)">{esc(content)}</p></div>' if content else ''}
 
-    {'<div class="detail-card"><div style="text-align:center"><button onclick="openParking()" style="padding:10px 24px;background:#10B981;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem;font-weight:600">🅿️ 근처 주차장 확인 →</button></div></div>' if lat and lng else ''}
+    {'<div class="detail-card"><div style="text-align:center"><button onclick="openParking()" style="padding:10px 24px;background:#10B981;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem;font-weight:600">🅿️ 근처 주차장 확인 →</button></div></div>' if (lat and lng) or address else ''}
 
     <div class="ad-middle"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025"></ins></div>
 
@@ -613,7 +614,7 @@ def generate_festival_pages():
 </div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div></div></footer>
 
 <script>
-{'function openParking(){window.open("https://wooaparking.wooahouse.com/?lat='+str(lat)+'&lng='+str(lng)+'","_blank")}' if lat and lng else ''}
+{'function openParking(){window.open("https://wooaparking.wooahouse.com/?lat='+str(lat)+'&lng='+str(lng)+'","_blank")}' if lat and lng else ('function openParking(){window.open("https://wooaparking.wooahouse.com/?q='+esc(address).replace('"','')+'","_blank")}' if address else '')}
 (adsbygoogle=window.adsbygoogle||[]).push({{}});
 (adsbygoogle=window.adsbygoogle||[]).push({{}});
 (adsbygoogle=window.adsbygoogle||[]).push({{}});
