@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T11:24:52.587382",
+  "updated": "2026-06-29T19:07:48.823723",
   "realm": "오페라",
   "total": 7,
   "items": [
@@ -16,7 +16,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_2026052821215931794.gif",
       "phone": "영음예술기획 02-581-5404",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71305"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71305",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
@@ -31,7 +32,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202606/f487036f5c1241b194a074e02b64a085.jpg",
       "phone": "1668-1352",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71005"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71005",
+      "content": "예술의전당 기획으로 오페라극장에서 선보이는 첫 번째 &lt;투란도트&gt;! 최고의 캐스팅과 압도적인 음악으로 예술의전당 대표 레퍼토리로 남을 명작이 온다."
     },
     {
       "seq": "",
@@ -46,7 +48,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202606/5f7c3208263e4d7f99c4128e555fa569.jpg",
       "phone": "1668-1352",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70961"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70961",
+      "content": "동화처럼 친숙한 이야기와 음악으로 아이의 첫 오페라를 열어주는 무대"
     },
     {
       "seq": "",
@@ -61,7 +64,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202606/53ab9a4d13ec421f89f082d1bfc08282.gif",
       "phone": "031-783-8000",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70537"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70537",
+      "content": "오페라 &lt;바람의 노래&gt;는 일제강점기부터 한국전쟁을 거쳐 근현대에 이르는 격동의 시간 속에서도 우리말과 우리글, 민족의 정서를 노래로 지켜 온 작곡가 박태현의 음악을 모티프로 삼은 창작 오페라"
     },
     {
       "seq": "",
@@ -76,7 +80,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031921182896143.jpg",
       "phone": "051-780-6060",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67942"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67942",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
@@ -91,7 +96,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_202603112118102745.gif",
       "phone": "031-783-8000",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67503"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67503",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
@@ -106,7 +112,8 @@
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/02/rdf_2026022621214120703.jpg",
       "phone": "1577-7766",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=66933"
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=66933",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     }
   ]
 }
