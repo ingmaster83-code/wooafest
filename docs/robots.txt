@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wooafest.wooahouse.com/sitemap.xml

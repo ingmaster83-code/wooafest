@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">행사 상세 | 우아축제</title>
+<meta name="description" id="pageDesc" content="전국 축제·공연·행사 상세 정보 | 우아축제 — 전국 문화행사 정보 한눈에">
+<meta name="kakao-key" content="78e249ab403b2955e4ca71e71f658549">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo"><span>🎪</span>우아축제</a>
+    <nav class="header-nav">
+      <a href="calendar.html">문화캘린더</a>
+      <a href="지역/서울.html">지역별</a>
+      <a href="분야/축제.html">분야별</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-top">
+  <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704"></ins>
+</div>
+
+<div class="main-layout" style="padding:20px">
+  <div class="main-content">
+    <div class="breadcrumb"><a href="/">홈</a><span>›</span><span id="breadRealm">행사</span><span>›</span><span id="breadTitle">상세</span></div>
+
+    <!-- 한눈에 보기 카드 -->
+    <div class="detail-card" id="detailCard">
+      <div class="loading">🔄 행사 정보를 불러오는 중...</div>
+    </div>
+
+    <!-- 행사 내용 -->
+    <div class="detail-card" id="detailContent" style="display:none">
+      <h2 style="font-size:1rem;font-weight:700;margin-bottom:12px">행사 내용</h2>
+      <div class="detail-content" id="contentText"></div>
+    </div>
+
+    <!-- 카카오맵 -->
+    <div class="detail-card" id="mapCard" style="display:none">
+      <h2 style="font-size:1rem;font-weight:700;margin-bottom:8px">📍 위치</h2>
+      <div id="map"></div>
+      <button onclick="openNav()" style="margin-top:12px;padding:8px 20px;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem">길찾기 →</button>
+    </div>
+
+    <!-- 중간 광고 -->
+    <div class="ad-middle">
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025"></ins>
+    </div>
+
+    <!-- WooaHouse 생태계 연동 -->
+    <div class="detail-card" id="ecoCard" style="display:none">
+      <h2 style="font-size:1rem;font-weight:700;margin-bottom:12px">🏠 주변 정보</h2>
+      <div class="ecosystem-section" id="ecoLinks"></div>
+    </div>
+
+    <!-- 비슷한 행사 추천 -->
+    <div id="similarSection" style="display:none">
+      <h2 class="section-title" style="margin-top:0">비슷한 행사</h2>
+      <div class="event-grid" id="similarEvents"></div>
+    </div>
+  </div>
+
+  <aside class="main-sidebar">
+    <div class="sidebar-ad">
+      <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="6255378195"></ins>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>🎪 wooafest</h4><p>전국 축제·공연·행사 정보 허브</p></div>
+      <div class="footer-col"><h4>분야별</h4><a href="분야/축제.html">축제</a><a href="분야/공연.html">공연</a><a href="분야/전시.html">전시</a><a href="분야/아동가족.html">아동가족</a></div>
+      <div class="footer-col"><h4>지역별</h4><a href="지역/서울.html">서울</a><a href="지역/경기.html">경기</a><a href="지역/부산.html">부산</a></div>
+      <div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+let evData = null;
+
+function getParam(k) {
+  return new URLSearchParams(location.search).get(k);
+}
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function formatDate(d) {
+  const s = String(d||'').replace(/\D/g,'');
+  if(s.length===8) return `${s.slice(0,4)}.${s.slice(4,6)}.${s.slice(6,8)}`;
+  return d||'';
+}
+function getDDayLabel(endDate, startDate) {
+  const now = new Date(); now.setHours(0,0,0,0);
+  const fix = d => new Date(String(d).replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3'));
+  const end = fix(endDate), start = fix(startDate);
+  if(now >= start && now <= end) return {label:'LIVE', cls:'badge-live'};
+  if(now < start) {
+    const n = Math.ceil((start-now)/86400000);
+    if(n<=3) return {label:`D-${n}`, cls:'badge-dday-urgent'};
+    if(n<=7) return {label:`D-${n}`, cls:'badge-dday-soon'};
+    return {label:`D-${n}`, cls:'badge-dday-normal'};
+  }
+  return {label:'종료', cls:'badge-dday-future'};
+}
+
+async function loadEvent() {
+  const seq = getParam('seq');
+  const card = document.getElementById('detailCard');
+
+  // 0) sessionStorage에서 클릭한 이벤트 데이터 읽기
+  const stored = sessionStorage.getItem('wooafest_event');
+  if (stored) {
+    try {
+      evData = JSON.parse(stored);
+      sessionStorage.removeItem('wooafest_event');
+      renderDetail();
+      return;
+    } catch(e) {}
+  }
+
+  // 1) API 상세 조회 시도
+  if (seq) {
+    try {
+      const apiUrl = `https://apis.data.go.kr/B553457/cultureinfo/detail2?serviceKey=${encodeURIComponent('API_KEY_PLACEHOLDER')}&seq=${seq}&format=json`;
+      const res = await fetch(apiUrl);
+      if (res.ok) {
+        const data = await res.json();
+        const item = data?.body?.items?.item?.[0] || data?.response?.body?.items?.item?.[0];
+        if (item) {
+          evData = normalizeAPIItem(item);
+          renderDetail();
+          return;
+        }
+      }
+    } catch(e) {}
+  }
+
+  // 2) 로컬 JSON에서 검색
+  try {
+    const [weekRes, festRes, perfRes] = await Promise.all([
+      fetch('data/culture/this_week.json').catch(()=>null),
+      fetch('data/festival.json').catch(()=>null),
+      fetch('data/performance.json').catch(()=>null)
+    ]);
+
+    let pool = [];
+    if(weekRes?.ok) { const d=await weekRes.json(); pool=[...pool,...(d.items||d||[])]; }
+    if(festRes?.ok) {
+      const d=await festRes.json();
+      const mapped=(d.records||d||[]).map(r=>({
+        seq:r['고유번호코드']?String(r['고유번호코드']):'',
+        title:r['축제명']||'',place:r['개최장소']||'',
+        startDate:(r['축제시작일자']||'').replace(/-/g,''),
+        endDate:(r['축제종료일자']||'').replace(/-/g,''),
+        content:r['축제내용']||'',lat:r['위도']||'',lng:r['경도']||'',
+        tel:r['전화번호']||'',homepage:r['홈페이지']||'',fee:'',realm:'축제'
+      }));
+      pool=[...pool,...mapped];
+    }
+    if(perfRes?.ok) {
+      const d=await perfRes.json();
+      const mapped=(d.records||d||[]).map(r=>({
+        title:r['행사명']||'',place:r['행사장소명']||r['개최장소']||'',
+        startDate:(r['행사시작일자']||'').replace(/-/g,''),
+        endDate:(r['행사종료일자']||'').replace(/-/g,''),
+        content:r['행사내용']||'',lat:r['위도좌표']||r['위도']||'',lng:r['경도좌표']||r['경도']||'',
+        fee:r['관람요금']||r['행사요금']||'',realm:r['분류']||'행사',
+        parking:r['주차시설']||'',age:r['입장연령']||''
+      }));
+      pool=[...pool,...mapped];
+    }
+
+    evData = seq ? pool.find(ev=>ev.seq===seq) || pool[0] : pool[0];
+    renderDetail();
+  } catch(e) {
+    card.innerHTML = '<div class="empty">행사 정보를 불러올 수 없습니다.</div>';
+  }
+}
+
+function normalizeAPIItem(item) {
+  return {
+    title: item.title||item.TITLE||'',
+    place: item.place||item.PLACE||'',
+    startDate: (item.startDate||item.STARTDATE||'').replace(/-/g,''),
+    endDate: (item.endDate||item.ENDDATE||'').replace(/-/g,''),
+    content: item.contents||item.CONTENTS||'',
+    lat: item.lat||item.LAT||'',
+    lng: item.lng||item.LNG||'',
+    fee: item.price||item.PRICE||'',
+    realm: item.realmName||item.REALMNAME||'행사',
+    tel: item.phone||item.PHONE||'',
+    homepage: item.url||item.URL||'',
+    parking: item.parking||'',
+    age: item.age||''
+  };
+}
+
+function renderDetail() {
+  if(!evData) return;
+  const ev = evData;
+  const title = ev.title||ev['행사명']||ev['축제명']||'';
+  const place = ev.place||ev['개최장소']||'';
+  const start = ev.startDate||ev['시작일자']||ev['축제시작일자']||'';
+  const end = ev.endDate||ev['종료일자']||ev['축제종료일자']||'';
+  const fee = ev.fee||ev['관람요금']||'';
+  const realm = ev.realm||ev['분야']||'행사';
+  const content = ev.content||ev['행사내용']||ev['축제내용']||'';
+  const lat = ev.lat||ev['위도']||'';
+  const lng = ev.lng||ev['경도']||'';
+  const tel = ev.tel||ev['전화번호']||'';
+  const homepage = ev.homepage||ev['홈페이지주소']||ev['홈페이지']||'';
+  const parking = ev.parking||ev['주차시설']||'';
+  const age = ev.age||ev['입장연령']||'';
+  const address = ev.address||ev['소재지도로명주소']||ev['소재지지번주소']||'';
+  const organizer = ev.organizer||ev['주최기관명']||'';
+  const host = ev.host||ev['주관기관명']||'';
+  const sponsor = ev.sponsor||ev['후원기관명']||'';
+
+  document.title = `${title} | 우아축제`;
+  document.getElementById('pageTitle').textContent = `${title} | 우아축제`;
+  document.getElementById('pageDesc').content = `${title} - ${place} | ${formatDate(start)}~${formatDate(end)}`;
+  document.getElementById('breadRealm').textContent = realm;
+  document.getElementById('breadTitle').textContent = title;
+
+  const dday = end ? getDDayLabel(end, start) : null;
+  const isFree = !fee || fee==='무료' || fee==='0' || fee==='0원';
+
+  document.getElementById('detailCard').innerHTML = `
+    <div class="detail-title">${escHtml(title)}</div>
+    <div class="event-card-badges" style="margin-bottom:12px">
+      <span class="badge badge-festival">${escHtml(realm)}</span>
+      ${isFree ? '<span class="badge badge-free">🆓 무료</span>' : fee ? `<span class="badge badge-paid">💰 유료</span>` : ''}
+      ${dday ? `<span class="badge ${dday.cls}">${dday.label}</span>` : ''}
+    </div>
+    <div class="detail-grid">
+      <div class="detail-item"><span class="label">📅 기간</span><span class="value">${formatDate(start)}${end?` ~ ${formatDate(end)}`:''}</span></div>
+      <div class="detail-item"><span class="label">📍 장소</span><span class="value">${escHtml(place)}</span></div>
+      ${address ? `<div class="detail-item"><span class="label">🗺️ 주소</span><span class="value">${escHtml(address)}</span></div>` : ''}
+      ${fee ? `<div class="detail-item"><span class="label">💰 요금</span><span class="value">${escHtml(fee)}</span></div>` : ''}
+      ${age ? `<div class="detail-item"><span class="label">👤 입장연령</span><span class="value">${escHtml(age)}</span></div>` : ''}
+      ${parking ? `<div class="detail-item"><span class="label">🚗 주차</span><span class="value">${escHtml(parking)}</span></div>` : ''}
+      ${organizer ? `<div class="detail-item"><span class="label">🏢 주최</span><span class="value">${escHtml(organizer)}</span></div>` : ''}
+      ${host ? `<div class="detail-item"><span class="label">📋 주관</span><span class="value">${escHtml(host)}</span></div>` : ''}
+      ${sponsor ? `<div class="detail-item"><span class="label">🤝 후원</span><span class="value">${escHtml(sponsor)}</span></div>` : ''}
+      ${tel ? `<div class="detail-item"><span class="label">📞 문의</span><span class="value"><a href="tel:${escHtml(tel)}" style="color:var(--primary)">${escHtml(tel)}</a></span></div>` : ''}
+      ${homepage ? `<div class="detail-item"><span class="label">🌐 홈페이지</span><span class="value"><a href="${escHtml(homepage)}" target="_blank" rel="noopener" style="color:var(--primary)">바로가기 →</a></span></div>` : ''}
+    </div>`;
+
+  if(content) {
+    document.getElementById('contentText').textContent = content;
+    document.getElementById('detailContent').style.display = '';
+  }
+
+  if(lat && lng) {
+    document.getElementById('mapCard').style.display = '';
+    loadKakaoMap(lat, lng, title);
+  }
+
+  // 생태계 연동
+  if(lat && lng) {
+    document.getElementById('ecoCard').style.display = '';
+    document.getElementById('ecoLinks').innerHTML = `
+      <a href="https://wooaparking.wooahouse.com/?lat=${lat}&lng=${lng}" target="_blank" class="ecosystem-card">
+        <span class="eco-icon">🅿️</span><span class="eco-title">근처 공영주차장</span><span class="eco-link">WooaParking →</span>
+      </a>
+      <a href="https://wooakids.wooahouse.com" target="_blank" class="ecosystem-card">
+        <span class="eco-icon">🧒</span><span class="eco-title">아이랑 관광지</span><span class="eco-link">WooaKids →</span>
+      </a>
+      <a href="https://wooacamp.wooahouse.com" target="_blank" class="ecosystem-card">
+        <span class="eco-icon">🏕️</span><span class="eco-title">근처 캠핑장</span><span class="eco-link">WooaCamp →</span>
+      </a>
+      <a href="https://wooasijang.wooahouse.com" target="_blank" class="ecosystem-card">
+        <span class="eco-icon">🏪</span><span class="eco-title">근처 전통시장</span><span class="eco-link">WooaSijang →</span>
+      </a>`;
+  }
+}
+
+function loadKakaoMap(lat, lng, title) {
+  const kakaoKey = document.querySelector('meta[name="kakao-key"]')?.content || '';
+  if(!kakaoKey) return;
+  const script = document.createElement('script');
+  script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoKey}&autoload=false`;
+  script.onload = () => {
+    kakao.maps.load(() => {
+      const container = document.getElementById('map');
+      const map = new kakao.maps.Map(container, {
+        center: new kakao.maps.LatLng(parseFloat(lat), parseFloat(lng)), level: 4
+      });
+      new kakao.maps.Marker({ map, position: new kakao.maps.LatLng(parseFloat(lat), parseFloat(lng)), title });
+    });
+  };
+  document.head.appendChild(script);
+}
+
+function openNav() {
+  if(!evData) return;
+  const lat = evData.lat||evData['위도']||'';
+  const lng = evData.lng||evData['경도']||'';
+  const title = evData.title||evData['행사명']||evData['축제명']||'';
+  if(lat && lng) window.open(`https://map.kakao.com/link/to/${encodeURIComponent(title)},${lat},${lng}`, '_blank');
+}
+
+(adsbygoogle=window.adsbygoogle||[]).push({});
+(adsbygoogle=window.adsbygoogle||[]).push({});
+(adsbygoogle=window.adsbygoogle||[]).push({});
+
+document.addEventListener('DOMContentLoaded', loadEvent);
+</script>
+</body>
+</html>

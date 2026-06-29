@@ -1,0 +1,39 @@
+name: 문화행사 데이터 자동 갱신
+
+on:
+  schedule:
+    - cron: '0 17 * * *'  # 매일 새벽 2시 KST (UTC 17:00)
+  workflow_dispatch:       # 수동 실행 허용
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r scripts/requirements.txt
+
+      - name: 데이터 수집
+        run: python scripts/fetch_data.py
+        env:
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+
+      - name: 페이지 생성
+        run: python scripts/generate_pages.py
+        env:
+          KAKAO_MAP_KEY: ${{ secrets.KAKAO_MAP_KEY }}
+
+      - name: 변경사항 커밋 & 푸시
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "문화행사 데이터 자동 갱신 $(date +'%Y-%m-%d')"
+          git push
