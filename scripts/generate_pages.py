@@ -103,14 +103,16 @@ def realm_badge(realm):
 
 
 def event_card_html(ev, idx):
+    import json as _json
     title = esc(ev.get('title') or ev.get('축제명') or ev.get('행사명') or '')
     place = esc(ev.get('place') or ev.get('개최장소') or ev.get('장소명') or '')
     start = ev.get('startDate') or ev.get('시작일자') or ev.get('축제시작일자') or ''
     end = ev.get('endDate') or ev.get('종료일자') or ev.get('축제종료일자') or ''
     fee = ev.get('fee') or ev.get('관람요금') or ev.get('요금') or ''
     realm = ev.get('realm') or ev.get('분야') or '행사'
-    seq = ev.get('seq') or str(idx)
-    return f'''<a href="../event.html?seq={esc(seq)}" class="event-card">
+    import base64 as _b64
+    ev_b64 = _b64.b64encode(_json.dumps(ev, ensure_ascii=True).encode('ascii')).decode('ascii')
+    return f'''<a href="#" onclick="event.preventDefault();try{{sessionStorage.setItem('wooafest_event',atob('{ev_b64}'));location.href='../event.html'}}catch(e){{}}" class="event-card">
   <div class="event-card-title">{title}</div>
   <div class="event-card-meta">
     {f'<span>📍 {place}</span>' if place else ''}
