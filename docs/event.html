@@ -232,7 +232,7 @@ function renderDetail() {
   const lat = ev.lat||ev['위도']||'';
   const lng = ev.lng||ev['경도']||'';
   const tel = ev.tel||ev['전화번호']||'';
-  const homepage = ev.homepage||ev['홈페이지주소']||ev['홈페이지']||'';
+  const homepage = ev.homepage||ev.url||ev['홈페이지주소']||ev['홈페이지']||'';
   const parking = ev.parking||ev['주차시설']||'';
   const age = ev.age||ev['입장연령']||'';
   const address = ev.address||ev['소재지도로명주소']||ev['소재지지번주소']||'';
