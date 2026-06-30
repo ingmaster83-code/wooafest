@@ -223,7 +223,7 @@ def generate_region_page(region):
 <meta property="og:site_name" content="우아축제">
 <meta property="og:description" content="{region} 축제, 공연, 전시, 문화행사 정보 총정리.">
 <link rel="stylesheet" href="../css/style.css">
-<style>ins.adsbygoogle{{display:none!important}}</style>
+<style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
@@ -361,7 +361,7 @@ def generate_realm_page(realm):
 <meta property="og:title" content="{seo_title} | 우아축제">
 <meta property="og:site_name" content="우아축제">
 <link rel="stylesheet" href="../css/style.css">
-<style>ins.adsbygoogle{{display:none!important}}</style>
+<style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
@@ -567,7 +567,7 @@ def generate_festival_pages():
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../css/style.css">
-<style>ins.adsbygoogle{{display:none!important}}</style>
+<style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 </head>
 <body>
 <header class="site-header">
