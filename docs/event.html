@@ -190,7 +190,11 @@ async function loadEvent() {
       pool=[...pool,...mapped];
     }
 
-    evData = seq ? pool.find(ev=>ev.seq===seq) || pool[0] : pool[0];
+    evData = seq ? pool.find(ev=>ev.seq===seq) || null : null;
+    if (!evData) {
+      card.innerHTML = '<div class="empty" style="text-align:center;padding:40px"><p>행사 정보를 찾을 수 없습니다.</p><a href="/" style="color:var(--primary)">← 홈으로 돌아가기</a></div>';
+      return;
+    }
     renderDetail();
   } catch(e) {
     card.innerHTML = '<div class="empty">행사 정보를 불러올 수 없습니다.</div>';
@@ -274,6 +278,11 @@ function renderDetail() {
   if(lat && lng) {
     document.getElementById('mapCard').style.display = '';
     loadKakaoMap(lat, lng, title);
+  } else if(place) {
+    // lat/lng 없어도 장소명 있으면 주차장 버튼만 표시
+    const mc = document.getElementById('mapCard');
+    mc.style.display = '';
+    mc.querySelector('#map').style.display = 'none';
   }
 
   // 공식 홈페이지 버튼 (url 있을 때)
@@ -322,7 +331,9 @@ function openParking() {
   if(!evData) return;
   const lat = evData.lat||evData['위도']||'';
   const lng = evData.lng||evData['경도']||'';
+  const place = evData.place||evData['개최장소']||evData['장소명']||'';
   if(lat && lng) window.open(`https://wooaparking.wooahouse.com/?lat=${lat}&lng=${lng}`, '_blank');
+  else if(place) window.open(`https://wooaparking.wooahouse.com/?q=${encodeURIComponent(place)}`, '_blank');
 }
 
 (adsbygoogle=window.adsbygoogle||[]).push({});
