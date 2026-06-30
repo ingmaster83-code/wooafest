@@ -183,9 +183,15 @@ def generate_region_page(region):
                 'place': r.get('개최장소', ''),
                 'startDate': str(r.get('축제시작일자', '')).replace('-', ''),
                 'endDate': str(r.get('축제종료일자', '')).replace('-', ''),
+                'lat': str(r.get('위도', '')), 'lng': str(r.get('경도', '')),
+                'address': r.get('소재지도로명주소', '') or r.get('소재지지번주소', ''),
+                'homepage': r.get('홈페이지주소', ''), 'tel': r.get('전화번호', ''),
+                'content': r.get('축제내용', ''),
                 'realm': '축제', 'fee': '', 'seq': ''
             })
 
+    today = datetime.now().strftime('%Y%m%d')
+    items = [ev for ev in items if (ev.get('endDate') or '99991231') >= today]
     cards_html = ''.join(event_card_html(ev, i) for i, ev in enumerate(items[:30]))
     if not cards_html:
         cards_html = f'<div class="empty">현재 {region} 지역 행사 정보를 수집 중입니다.</div>'
@@ -314,9 +320,15 @@ def generate_realm_page(realm):
                 'place': r.get('개최장소', ''),
                 'startDate': str(r.get('축제시작일자', '')).replace('-', ''),
                 'endDate': str(r.get('축제종료일자', '')).replace('-', ''),
+                'lat': str(r.get('위도', '')), 'lng': str(r.get('경도', '')),
+                'address': r.get('소재지도로명주소', '') or r.get('소재지지번주소', ''),
+                'homepage': r.get('홈페이지주소', ''), 'tel': r.get('전화번호', ''),
+                'content': r.get('축제내용', ''),
                 'realm': '축제', 'fee': '', 'seq': ''
             })
 
+    today = datetime.now().strftime('%Y%m%d')
+    items = [ev for ev in items if (ev.get('endDate') or '99991231') >= today]
     cards_html = ''.join(event_card_html(ev, i) for i, ev in enumerate(items[:40]))
     if not cards_html:
         cards_html = f'<div class="empty">현재 {realm} 행사 정보를 수집 중입니다.</div>'
