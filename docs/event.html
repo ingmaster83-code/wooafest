@@ -277,12 +277,10 @@ function renderDetail() {
 
   if(lat && lng) {
     document.getElementById('mapCard').style.display = '';
-    loadKakaoMap(lat, lng, title);
+    loadKakaoMap(parseFloat(lat), parseFloat(lng), title);
   } else if(place) {
-    // lat/lng 없어도 장소명 있으면 주차장 버튼만 표시
-    const mc = document.getElementById('mapCard');
-    mc.style.display = '';
-    mc.querySelector('#map').style.display = 'none';
+    document.getElementById('mapCard').style.display = '';
+    loadKakaoMapByPlace(place, title);
   }
 
   // 공식 홈페이지 버튼 (url 있을 때)
@@ -310,27 +308,48 @@ function renderDetail() {
     </a>`;
 }
 
-function loadKakaoMap(lat, lng, title) {
+function loadKakaoSDK(callback) {
   const kakaoKey = document.querySelector('meta[name="kakao-key"]')?.content || '';
   if(!kakaoKey) return;
+  if(window.kakao && window.kakao.maps) { kakao.maps.load(callback); return; }
   const script = document.createElement('script');
-  script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoKey}&autoload=false`;
-  script.onload = () => {
-    kakao.maps.load(() => {
-      const container = document.getElementById('map');
-      const map = new kakao.maps.Map(container, {
-        center: new kakao.maps.LatLng(parseFloat(lat), parseFloat(lng)), level: 4
-      });
-      new kakao.maps.Marker({ map, position: new kakao.maps.LatLng(parseFloat(lat), parseFloat(lng)), title });
-    });
-  };
+  script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoKey}&libraries=services&autoload=false`;
+  script.onload = () => kakao.maps.load(callback);
   document.head.appendChild(script);
+}
+
+function loadKakaoMap(lat, lng, title) {
+  loadKakaoSDK(() => {
+    const container = document.getElementById('map');
+    const pos = new kakao.maps.LatLng(lat, lng);
+    const map = new kakao.maps.Map(container, { center: pos, level: 4 });
+    new kakao.maps.Marker({ map, position: pos, title });
+  });
+}
+
+function loadKakaoMapByPlace(place, title) {
+  loadKakaoSDK(() => {
+    const ps = new kakao.maps.services.Places();
+    ps.keywordSearch(place, (data, status) => {
+      const container = document.getElementById('map');
+      if(status === kakao.maps.services.Status.OK && data.length > 0) {
+        const lat = parseFloat(data[0].y), lng = parseFloat(data[0].x);
+        const pos = new kakao.maps.LatLng(lat, lng);
+        const map = new kakao.maps.Map(container, { center: pos, level: 4 });
+        new kakao.maps.Marker({ map, position: pos, title });
+        // openParking에서 쓸 수 있도록 evData에 저장
+        if(evData) { evData._resolvedLat = lat; evData._resolvedLng = lng; }
+      } else {
+        container.style.display = 'none';
+      }
+    });
+  });
 }
 
 function openParking() {
   if(!evData) return;
-  const lat = evData.lat||evData['위도']||'';
-  const lng = evData.lng||evData['경도']||'';
+  const lat = evData._resolvedLat || evData.lat||evData['위도']||'';
+  const lng = evData._resolvedLng || evData.lng||evData['경도']||'';
   const place = evData.place||evData['개최장소']||evData['장소명']||'';
   if(lat && lng) window.open(`https://wooaparking.wooahouse.com/?lat=${lat}&lng=${lng}`, '_blank');
   else if(place) window.open(`https://wooaparking.wooahouse.com/?q=${encodeURIComponent(place)}`, '_blank');
