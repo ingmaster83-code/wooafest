@@ -1,8 +1,40 @@
 {
-  "updated": "2026-06-30T19:00:41.107052",
+  "updated": "2026-07-01T19:02:10.858570",
   "realm": "연극",
-  "total": 34,
+  "total": 36,
   "items": [
+    {
+      "seq": "",
+      "title": "[양구] 2026 양구문화재단 7월 기획공, 달소년",
+      "place": "버드나무 예술창고 공연장",
+      "startDate": "20260703",
+      "endDate": "20260704",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_202606252117447008.png",
+      "phone": "033-481-9192",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71486",
+      "content": "안녕하세요. 양구문화재단입니다.\n\n양구에서 만나는 밤하늘을 닮은 아름다운 무대 위에서 펼쳐지는 감성 인형극 〈달소년〉.\n\n미니어처 세트와 인형, 영상이 어우러진 특별한 공연으로 잠들지 못하는 아이와 달소년의 따뜻한 이야기를 담아낸 인형극입니다.&nbsp;\n\n아이들에게는 상상력과 꿈을, 어른들에게는 따뜻한 추억과 감동을 전하는 공연! ✨\n\n달빛처럼 포근한 이야기와 아름다운 무대 연출이 어우러져 가족 모두가 함께 즐길 수 있는 시간을 선사합니다.&nbsp;\n\n올여름, 달빛이 전하는 따뜻한 이야기 속에서 아이와 어른 모두의 마음을 밝혀줄 특별한 무대, 〈달소년〉을 만나보세요."
+    },
+    {
+      "seq": "",
+      "title": "2026년 이천무형유산 전수교육관 상설공연 <거북아, 거북아 놀아라>",
+      "place": "이천문화재단",
+      "startDate": "20260315",
+      "endDate": "20261101",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026062521181332626.jpg",
+      "phone": "031-633-9758",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71417",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "2026 디지털 해외공연영상 시리즈, NT Live 디 오디언스 (영상화)",
@@ -485,22 +517,6 @@
     },
     {
       "seq": "",
-      "title": "국립극단 2026 기획초청 Pick크닉 <이상한어린이연극-오감도>",
-      "place": "국립극단 [명동] 명동예술극장",
-      "startDate": "20260206",
-      "endDate": "20260214",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_2025121010412992563.jpg",
-      "phone": "1644-2003",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63041",
-      "content": "2024년 초연 후, 각종 저명한 상을 휩쓸며 나타났다. 어린이와 가장 가까운 어린이연극, 어린이를 넘어 우리 모두를 향하는 섬세한 질문들!"
-    },
-    {
-      "seq": "",
       "title": "국립극단 2026 기획초청 Pick크닉 <셋톱박스>",
       "place": "국립극단 [명동] 명동예술극장",
       "startDate": "20260123",
@@ -517,19 +533,19 @@
     },
     {
       "seq": "",
-      "title": "[대학로극장 쿼드] 2026 기획공연 <함수 도미노>",
-      "place": "서울문화재단 대학로센터 대학로극장 쿼드",
-      "startDate": "20260220",
-      "endDate": "20260228",
+      "title": "국립극단 2026 기획초청 Pick크닉 <이상한어린이연극-오감도>",
+      "place": "국립극단 [명동] 명동예술극장",
+      "startDate": "20260206",
+      "endDate": "20260214",
       "fee": "",
       "realm": "연극",
       "area": "",
       "lat": "",
       "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_202512091050181537.jpg",
-      "phone": "대학로극장 쿼드 1577-0369",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=62918",
-      "content": "일본의 주요 연극상을 휩쓴 마에카와 토모히로의 대표작 &lt;함수 도미노&gt;는 원인 불명의 교통사고로 시작된 미스터리한 사건의 실마리를 하나씩 따라가 &lsquo;도미노&rsquo;라는 존재의 정체를 밝혀가는 여정을 속도감 있게 그려내며 현대 사회 시스템의 균열과 인간 내면의 복잡한 심리에 대한 날카로운 통찰을 담고있다."
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_2025121010412992563.jpg",
+      "phone": "1644-2003",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63041",
+      "content": "2024년 초연 후, 각종 저명한 상을 휩쓸며 나타났다. 어린이와 가장 가까운 어린이연극, 어린이를 넘어 우리 모두를 향하는 섬세한 질문들!"
     },
     {
       "seq": "",
@@ -546,6 +562,22 @@
       "phone": "대학로극장 쿼드 1577-0369",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=62916",
       "content": "※ 공연 특성 상 소량 객석 판매로 예매 시 혼선 방지를 위해 2025년 12월 31일까지 무통장입금이 제한됩니다.\n\n※ 2월 7일(토) 18:30 회차는 단체 관람으로 인해 판매 마감되었습니다. 예매 시 참고 부탁드립니다."
+    },
+    {
+      "seq": "",
+      "title": "[대학로극장 쿼드] 2026 기획공연 <함수 도미노>",
+      "place": "서울문화재단 대학로센터 대학로극장 쿼드",
+      "startDate": "20260220",
+      "endDate": "20260228",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_202512091050181537.jpg",
+      "phone": "대학로극장 쿼드 1577-0369",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=62918",
+      "content": "일본의 주요 연극상을 휩쓴 마에카와 토모히로의 대표작 &lt;함수 도미노&gt;는 원인 불명의 교통사고로 시작된 미스터리한 사건의 실마리를 하나씩 따라가 &lsquo;도미노&rsquo;라는 존재의 정체를 밝혀가는 여정을 속도감 있게 그려내며 현대 사회 시스템의 균열과 인간 내면의 복잡한 심리에 대한 날카로운 통찰을 담고있다."
     }
   ]
 }
