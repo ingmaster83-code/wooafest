@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T19:02:12.420606",
+  "updated": "2026-07-02T18:28:27.087946",
   "realm": "뮤지컬",
   "total": 9,
   "items": [
@@ -85,22 +85,6 @@
     },
     {
       "seq": "",
-      "title": "2026 기획공연 뮤지컬 <피리 부는 사나이>",
-      "place": "국립정동극장",
-      "startDate": "20260612",
-      "endDate": "20260802",
-      "fee": "",
-      "realm": "뮤지컬",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/rlyPerfInfo/2026/202604/b7a602af6c44458a8de09cb38c2d7970.jpg",
-      "phone": "02-751-1500",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67892",
-      "content": "포크 음악의 거장, 송창식의 명곡으로 되살아난 격동의 시대"
-    },
-    {
-      "seq": "",
       "title": "2026 창작ing 뮤지컬 <던터치>",
       "place": "국립정동극장 세실 (구.세실극장)",
       "startDate": "20260619",
@@ -114,6 +98,22 @@
       "phone": "02-751-1500",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67893",
       "content": "던 터치(Dawn Touch)'에 이르는 8시간의 여정을 다룬 작품"
+    },
+    {
+      "seq": "",
+      "title": "2026 기획공연 뮤지컬 <피리 부는 사나이>",
+      "place": "국립정동극장",
+      "startDate": "20260612",
+      "endDate": "20260802",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/rlyPerfInfo/2026/202604/b7a602af6c44458a8de09cb38c2d7970.jpg",
+      "phone": "02-751-1500",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67892",
+      "content": "포크 음악의 거장, 송창식의 명곡으로 되살아난 격동의 시대"
     },
     {
       "seq": "",

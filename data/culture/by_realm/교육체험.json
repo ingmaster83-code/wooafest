@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T19:02:23.989932",
+  "updated": "2026-07-02T18:28:40.118811",
   "realm": "교육체험",
   "total": 16,
   "items": [
@@ -69,22 +69,6 @@
     },
     {
       "seq": "",
-      "title": "[도고아트홀] 2026년 6월 기획 공연 안내",
-      "place": "도고아트홀",
-      "startDate": "20260606",
-      "endDate": "20260628",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202605/1fbb4908dbb7415099982b052292c75c.png",
-      "phone": "도고아트홀 041-542-5145",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70005",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "어반브레이크 & 토이콘 서울 2026",
       "place": "코엑스 D홀",
       "startDate": "20260730",
@@ -98,6 +82,22 @@
       "phone": "1661-0118",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70007",
       "content": "아토토이, 그래피티, IP, 회화, 오브제, 컬렉터블 문화까지 하나의 공간에서 동시에 경험하는 새로운 아티스트 페스티벌"
+    },
+    {
+      "seq": "",
+      "title": "[도고아트홀] 2026년 6월 기획 공연 안내",
+      "place": "도고아트홀",
+      "startDate": "20260606",
+      "endDate": "20260628",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202605/1fbb4908dbb7415099982b052292c75c.png",
+      "phone": "도고아트홀 041-542-5145",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70005",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
