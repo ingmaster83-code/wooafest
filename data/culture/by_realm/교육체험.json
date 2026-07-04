@@ -1,8 +1,24 @@
 {
-  "updated": "2026-07-03T18:16:39.797543",
+  "updated": "2026-07-04T18:06:48.159738",
   "realm": "교육체험",
-  "total": 0,
+  "total": 17,
   "items": [
+    {
+      "seq": "",
+      "title": "[도고아트홀] 2026년 7월 기획 공연 안내",
+      "place": "도고아트홀",
+      "startDate": "20260704",
+      "endDate": "20260726",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202606/406f874c4c74477492641b8dd66c6c71.png",
+      "phone": "도고아트홀 041-542-5145",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71593",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "[김포] 2026 어린이 아트스테이지, 해피해프닝",
