@@ -1,0 +1,33 @@
+{
+  "name": "우아축제 - 전국 축제·공연·행사",
+  "short_name": "우아축제",
+  "description": "전국 축제, 공연, 전시, 문화행사 정보를 한눈에. 이번 주말 근처 축제, 무료 공연, 아이랑 갈만한 행사.",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#1A1A2E",
+  "theme_color": "#7C3AED",
+  "lang": "ko",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

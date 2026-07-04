@@ -223,6 +223,8 @@ def generate_region_page(region):
 <meta property="og:site_name" content="우아축제">
 <meta property="og:description" content="{region} 축제, 공연, 전시, 문화행사 정보 총정리.">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7C3AED">
 <style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
@@ -298,6 +300,8 @@ function setFilter(realm, btn) {{
   }});
 }}
 </script>
+<script>window.PWA_CONFIG={{appName:"우아축제",themeColor:"#7C3AED",icon:"🎪",convertIds:[]}};</script>
+<script src="../js/pwa-install.js"></script>
 </body>
 </html>'''
 
@@ -361,6 +365,8 @@ def generate_realm_page(realm):
 <meta property="og:title" content="{seo_title} | 우아축제">
 <meta property="og:site_name" content="우아축제">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7C3AED">
 <style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
@@ -414,6 +420,8 @@ function setFilter(type, btn) {{
   }});
 }}
 </script>
+<script>window.PWA_CONFIG={{appName:"우아축제",themeColor:"#7C3AED",icon:"🎪",convertIds:[]}};</script>
+<script src="../js/pwa-install.js"></script>
 </body>
 </html>'''
 
@@ -567,6 +575,8 @@ def generate_festival_pages():
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../css/style.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7C3AED">
 <style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 </head>
 <body>
@@ -644,6 +654,8 @@ def generate_festival_pages():
 (adsbygoogle=window.adsbygoogle||[]).push({{}});
 (adsbygoogle=window.adsbygoogle||[]).push({{}});
 </script>
+<script>window.PWA_CONFIG={{appName:"우아축제",themeColor:"#7C3AED",icon:"🎪",convertIds:[]}};</script>
+<script src="../js/pwa-install.js"></script>
 </body>
 </html>'''
 
