@@ -225,7 +225,6 @@ def generate_region_page(region):
 <link rel="stylesheet" href="../css/style.css">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#7C3AED">
-<style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
@@ -367,7 +366,6 @@ def generate_realm_page(realm):
 <link rel="stylesheet" href="../css/style.css">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#7C3AED">
-<style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
@@ -577,7 +575,6 @@ def generate_festival_pages():
 <link rel="stylesheet" href="../css/style.css">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#7C3AED">
-<style>ins.adsbygoogle{{display:none!important}}.ad-top,.ad-middle,.sidebar-ad{{display:none!important}}</style>
 </head>
 <body>
 <header class="site-header">
