@@ -490,6 +490,7 @@ def generate_festival_pages():
         lat = r.get('위도', '')
         lng = r.get('경도', '')
         region = get_region_from_address(address)
+        category = r.get('분류', '')
 
         # 날짜 포맷
         start_fmt = fmt_date(start)
@@ -501,6 +502,25 @@ def generate_festival_pages():
 
         # D-Day 배지
         dday = dday_badge(end, start)
+
+        # content가 없거나 이름과 같으면 자동 생성
+        if not content or content.strip() == name.strip() or len(content.strip()) < 20:
+            month_num = start[4:6] if len(start) >= 6 else ''
+            year_num = start[:4] if len(start) >= 4 else str(today.year)
+            cat_label = category if category and category != '축제' else '문화행사'
+            period_desc = f"{start_fmt}부터 {end_fmt}까지" if end_fmt and end_fmt != start_fmt else f"{start_fmt}"
+            place_desc = f"{place}에서" if place else (f"{address}에서" if address else "")
+            region_desc = f"{region} " if region else ""
+            _org = organizer or host
+            org_desc = f"{_org} 주최로 열리는 " if _org else ""
+            content = (
+                f"{name}은 {year_num}년 {month_num}월 {region_desc}{cat_label}로, "
+                f"{period_desc} {place_desc} 개최됩니다. "
+                f"{org_desc}"
+                f"지역 주민과 방문객 모두가 즐길 수 있는 문화 행사로, "
+                f"다양한 공연·전시·체험 프로그램이 마련될 예정입니다. "
+                f"관람 및 참가 문의는 주최 측에 확인하시기 바랍니다."
+            )
 
         # SEO description — 구체적 정보 포함
         desc_parts = [f"{name}은 {start_fmt}~{end_fmt}"]
