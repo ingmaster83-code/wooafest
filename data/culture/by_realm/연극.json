@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T18:22:26.271630",
+  "updated": "2026-07-09T18:53:03.119534",
   "realm": "연극",
   "total": 38,
   "items": [
@@ -69,22 +69,6 @@
     },
     {
       "seq": "",
-      "title": "2026 디지털 해외공연영상 시리즈, NT Live 디 오디언스 (영상화)",
-      "place": "고양아람누리 아람극장",
-      "startDate": "20260628",
-      "endDate": "20260628",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_202605292125398385.jpg",
-      "phone": "1577-7766",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71333",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "두산인문극장 2026: 신분류학 New Taxonomy, 나는 나의 아내다",
       "place": "두산아트센터 Space111",
       "startDate": "20260624",
@@ -113,6 +97,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_2026052821251185602.jpg",
       "phone": "1577-7766",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71308",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 디지털 해외공연영상 시리즈, NT Live 디 오디언스 (영상화)",
+      "place": "고양아람누리 아람극장",
+      "startDate": "20260628",
+      "endDate": "20260628",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_202605292125398385.jpg",
+      "phone": "1577-7766",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71333",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
