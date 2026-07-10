@@ -1,8 +1,40 @@
 {
-  "updated": "2026-07-09T18:53:06.616245",
+  "updated": "2026-07-10T18:25:31.631373",
   "realm": "뮤지컬",
-  "total": 9,
+  "total": 11,
   "items": [
+    {
+      "seq": "",
+      "title": "2026 꿈꾸는극장, 동물원에 간 고양이",
+      "place": "꿈나무극장",
+      "startDate": "20260711",
+      "endDate": "20260711",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061221171147707.gif",
+      "phone": "02-830-2562",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71990",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "[대전] 2026 베스트셀러 뮤지컬 <커다란 방귀>",
+      "place": "대전평송청소년문화센터",
+      "startDate": "20260711",
+      "endDate": "20260711",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_202606112124126458.gif",
+      "phone": "070-7807-0701",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71983",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "2026 뮤지컬 <숲속 100층짜리 집>",

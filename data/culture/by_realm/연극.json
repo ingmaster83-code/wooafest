@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T18:53:03.119534",
+  "updated": "2026-07-10T18:25:29.896383",
   "realm": "연극",
   "total": 38,
   "items": [
@@ -69,6 +69,22 @@
     },
     {
       "seq": "",
+      "title": "2026 디지털 해외공연영상 시리즈, NT Live 디 오디언스 (영상화)",
+      "place": "고양아람누리 아람극장",
+      "startDate": "20260628",
+      "endDate": "20260628",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_202605292125398385.jpg",
+      "phone": "1577-7766",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71333",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
       "title": "두산인문극장 2026: 신분류학 New Taxonomy, 나는 나의 아내다",
       "place": "두산아트센터 Space111",
       "startDate": "20260624",
@@ -97,22 +113,6 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_2026052821251185602.jpg",
       "phone": "1577-7766",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71308",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
-      "title": "2026 디지털 해외공연영상 시리즈, NT Live 디 오디언스 (영상화)",
-      "place": "고양아람누리 아람극장",
-      "startDate": "20260628",
-      "endDate": "20260628",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/05/rdf_202605292125398385.jpg",
-      "phone": "1577-7766",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71333",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -341,22 +341,6 @@
     },
     {
       "seq": "",
-      "title": "2026 안전 연극제: 면역력 <손가락 걸고>",
-      "place": "연극실험실 혜화동1번지",
-      "startDate": "20260409",
-      "endDate": "20260412",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026032321171238055.jpg",
-      "phone": "-",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67529",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "2026 안전 연극제: 면역력 <이제야 조금 안심이 된다>",
       "place": "연극실험실 혜화동1번지",
       "startDate": "20260409",
@@ -370,6 +354,22 @@
       "phone": "-",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67491",
       "content": "사랑을 하면 자꾸 잘못을 저지르게 된다. 사랑을 해서 자꾸 잘못을 저지른다. 자꾸 잘못을 저지른 뒤에도 사랑을 받기를 원한다. 어떤 사람들은 분명히, 사랑을 해서 그렇게 된다. 터무니없게 오역되고 쉽게 오해를 사는 나의 사랑. 어쩌면 이상하게 보이는 것이 당연할지 모르는 나의 사랑의 방식. 그렇지만 사실 나는 그저 어떻게든 안심하고 싶을 뿐이다. 그러니 나와 닮은 당신도 이런 나를 보며 안심할 수 있다면 좋겠다. 세상이 선호하지 않을 방식으로 사랑을 하는, 세상이 선호하지 않을 방식으로만 안심할 수 있는 모든 당신들을 위하여. 모든 내가, 모든 당신이 조금이라도 덜 외로울 수 있기를 바란다. 모든 내가, 모든 당신이 각자의 방식으로 삶을 연장할 수 있기를 바란다."
+    },
+    {
+      "seq": "",
+      "title": "2026 안전 연극제: 면역력 <손가락 걸고>",
+      "place": "연극실험실 혜화동1번지",
+      "startDate": "20260409",
+      "endDate": "20260412",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026032321171238055.jpg",
+      "phone": "-",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67529",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
@@ -405,22 +405,6 @@
     },
     {
       "seq": "",
-      "title": "2026 대한민국연극제 서울대회 참가작, NO EXIT (강남지부)",
-      "place": "강남씨어터",
-      "startDate": "20260403",
-      "endDate": "20260404",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031321172437449.jpg",
-      "phone": "02-2055-3055",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67177",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "2026 대한민국연극제 서울대회 참가작, 물고기 여인(서대문지부)",
       "place": "북아현아트홀",
       "startDate": "20260404",
@@ -433,6 +417,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031021171572530.png",
       "phone": "-",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67200",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 대한민국연극제 서울대회 참가작, NO EXIT (강남지부)",
+      "place": "강남씨어터",
+      "startDate": "20260403",
+      "endDate": "20260404",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031321172437449.jpg",
+      "phone": "02-2055-3055",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67177",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -549,22 +549,6 @@
     },
     {
       "seq": "",
-      "title": "국립극단 2026 기획초청 Pick크닉 <이상한어린이연극-오감도>",
-      "place": "국립극단 [명동] 명동예술극장",
-      "startDate": "20260206",
-      "endDate": "20260214",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_2025121010412992563.jpg",
-      "phone": "1644-2003",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63041",
-      "content": "2024년 초연 후, 각종 저명한 상을 휩쓸며 나타났다. 어린이와 가장 가까운 어린이연극, 어린이를 넘어 우리 모두를 향하는 섬세한 질문들!"
-    },
-    {
-      "seq": "",
       "title": "국립극단 2026 기획초청 Pick크닉 <셋톱박스>",
       "place": "국립극단 [명동] 명동예술극장",
       "startDate": "20260123",
@@ -578,6 +562,22 @@
       "phone": "1644-2003",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63040",
       "content": "2020년 창작산실 대본공모 선정작! 연출이 실제 경험한 일을 심도 있게 그러나 유쾌하게 담아낸 자전적 작품 &lt;셋톱박스&gt;"
+    },
+    {
+      "seq": "",
+      "title": "국립극단 2026 기획초청 Pick크닉 <이상한어린이연극-오감도>",
+      "place": "국립극단 [명동] 명동예술극장",
+      "startDate": "20260206",
+      "endDate": "20260214",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_2025121010412992563.jpg",
+      "phone": "1644-2003",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63041",
+      "content": "2024년 초연 후, 각종 저명한 상을 휩쓸며 나타났다. 어린이와 가장 가까운 어린이연극, 어린이를 넘어 우리 모두를 향하는 섬세한 질문들!"
     },
     {
       "seq": "",
