@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T18:08:28.641102",
+  "updated": "2026-07-15T18:12:45.448915",
   "realm": "연극",
   "total": 38,
   "items": [
@@ -389,22 +389,6 @@
     },
     {
       "seq": "",
-      "title": "2026 대한민국연극제 서울대회 참가작, 물고기 여인(서대문지부)",
-      "place": "북아현아트홀",
-      "startDate": "20260404",
-      "endDate": "20260404",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031021171572530.png",
-      "phone": "-",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67200",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "2026 대한민국연극제 서울대회 참가작, NO EXIT (강남지부)",
       "place": "강남씨어터",
       "startDate": "20260403",
@@ -417,6 +401,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031321172437449.jpg",
       "phone": "02-2055-3055",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67177",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 대한민국연극제 서울대회 참가작, 물고기 여인(서대문지부)",
+      "place": "북아현아트홀",
+      "startDate": "20260404",
+      "endDate": "20260404",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031021171572530.png",
+      "phone": "-",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67200",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -581,22 +581,6 @@
     },
     {
       "seq": "",
-      "title": "[대학로극장 쿼드] 2026 기획공연 <땅 밑에>",
-      "place": "서울문화재단 대학로센터 대학로극장 쿼드",
-      "startDate": "20260127",
-      "endDate": "20260208",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_202512091046148422.jpg",
-      "phone": "대학로극장 쿼드 1577-0369",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=62916",
-      "content": "※ 공연 특성 상 소량 객석 판매로 예매 시 혼선 방지를 위해 2025년 12월 31일까지 무통장입금이 제한됩니다.\n\n※ 2월 7일(토) 18:30 회차는 단체 관람으로 인해 판매 마감되었습니다. 예매 시 참고 부탁드립니다."
-    },
-    {
-      "seq": "",
       "title": "[대학로극장 쿼드] 2026 기획공연 <함수 도미노>",
       "place": "서울문화재단 대학로센터 대학로극장 쿼드",
       "startDate": "20260220",
@@ -610,6 +594,22 @@
       "phone": "대학로극장 쿼드 1577-0369",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=62918",
       "content": "일본의 주요 연극상을 휩쓴 마에카와 토모히로의 대표작 &lt;함수 도미노&gt;는 원인 불명의 교통사고로 시작된 미스터리한 사건의 실마리를 하나씩 따라가 &lsquo;도미노&rsquo;라는 존재의 정체를 밝혀가는 여정을 속도감 있게 그려내며 현대 사회 시스템의 균열과 인간 내면의 복잡한 심리에 대한 날카로운 통찰을 담고있다."
+    },
+    {
+      "seq": "",
+      "title": "[대학로극장 쿼드] 2026 기획공연 <땅 밑에>",
+      "place": "서울문화재단 대학로센터 대학로극장 쿼드",
+      "startDate": "20260127",
+      "endDate": "20260208",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_202512091046148422.jpg",
+      "phone": "대학로극장 쿼드 1577-0369",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=62916",
+      "content": "※ 공연 특성 상 소량 객석 판매로 예매 시 혼선 방지를 위해 2025년 12월 31일까지 무통장입금이 제한됩니다.\n\n※ 2월 7일(토) 18:30 회차는 단체 관람으로 인해 판매 마감되었습니다. 예매 시 참고 부탁드립니다."
     }
   ]
 }
