@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T18:12:45.448915",
+  "updated": "2026-07-16T18:10:17.596748",
   "realm": "연극",
   "total": 38,
   "items": [
@@ -213,22 +213,6 @@
     },
     {
       "seq": "",
-      "title": "＜제랄다와 거인＞ 2026 아르코꿈밭극장 공동기획",
-      "place": "아르코 꿈밭극장",
-      "startDate": "20260501",
-      "endDate": "20260505",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/04/rdf_2026041321172982721.jpg",
-      "phone": "-",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=68504",
-      "content": "&ldquo;소외된 인간관계를 회복하는 힘은 무엇일까?&rdquo;\n\n&lt;제랄다와 거인&gt;은 우리 삶에서 &lsquo;정성스러움&rsquo;이 가져오는 소중한 변화를 알려주는 이야기입니다.\n\n\n\n작은 종이컵 속 커다란 상상의 세계!&nbsp;\n\n어라? 분명히 종이컵이었는데, 내 눈앞에서 펼쳐지는 순간적인 변화!\n\n손가락만한 작은컵에서 배구공만한 팝콘컵에 이르는 다양한 종이컵들의 대변신!\n\n팝콘컵 거인 인형이 대형무대 거대한 인형보다 훨씬 크게 느껴지는 요술 같은 무대!\n\n\n\n일상에서 버려지는 종이컵들이 무대 위에서 상상 이상으로 무한한 변신을 합니다.\n\n그 어떤 화려한 무대보다 더 몰입되고 압도되는 독특한 형태의 아날로그 무대공연이 펼쳐집니다.\n\n\n\n게다가 이들을 자유롭게 움직이는 배우는 딱 한 명!&nbsp;\n\n연기, 마임과 노래를 펼치는 종이컵 인형들!\n\n1인 배우의 인형극 매력에 흠뻑 빠져보아요!\n\n\n\n음식은 몸에 기운을 북돋아 줄 뿐만이 아니라,&nbsp;\n\n마음과 관계를 치유시키는 힘도 있대요.\n\n정성스런 음식의 마법으로 소외된 인간관계를 회복시키는 이야기!"
-    },
-    {
-      "seq": "",
       "title": "2026 대한민국연극제 서울대회 참가작, 피어 날다(성북지부)",
       "place": "성북구민회관 대강당",
       "startDate": "20260424",
@@ -242,6 +226,22 @@
       "phone": "-",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=68520",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "＜제랄다와 거인＞ 2026 아르코꿈밭극장 공동기획",
+      "place": "아르코 꿈밭극장",
+      "startDate": "20260501",
+      "endDate": "20260505",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/04/rdf_2026041321172982721.jpg",
+      "phone": "-",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=68504",
+      "content": "&ldquo;소외된 인간관계를 회복하는 힘은 무엇일까?&rdquo;\n\n&lt;제랄다와 거인&gt;은 우리 삶에서 &lsquo;정성스러움&rsquo;이 가져오는 소중한 변화를 알려주는 이야기입니다.\n\n\n\n작은 종이컵 속 커다란 상상의 세계!&nbsp;\n\n어라? 분명히 종이컵이었는데, 내 눈앞에서 펼쳐지는 순간적인 변화!\n\n손가락만한 작은컵에서 배구공만한 팝콘컵에 이르는 다양한 종이컵들의 대변신!\n\n팝콘컵 거인 인형이 대형무대 거대한 인형보다 훨씬 크게 느껴지는 요술 같은 무대!\n\n\n\n일상에서 버려지는 종이컵들이 무대 위에서 상상 이상으로 무한한 변신을 합니다.\n\n그 어떤 화려한 무대보다 더 몰입되고 압도되는 독특한 형태의 아날로그 무대공연이 펼쳐집니다.\n\n\n\n게다가 이들을 자유롭게 움직이는 배우는 딱 한 명!&nbsp;\n\n연기, 마임과 노래를 펼치는 종이컵 인형들!\n\n1인 배우의 인형극 매력에 흠뻑 빠져보아요!\n\n\n\n음식은 몸에 기운을 북돋아 줄 뿐만이 아니라,&nbsp;\n\n마음과 관계를 치유시키는 힘도 있대요.\n\n정성스런 음식의 마법으로 소외된 인간관계를 회복시키는 이야기!"
     },
     {
       "seq": "",
@@ -389,19 +389,19 @@
     },
     {
       "seq": "",
-      "title": "2026 대한민국연극제 서울대회 참가작, NO EXIT (강남지부)",
-      "place": "강남씨어터",
-      "startDate": "20260403",
-      "endDate": "20260404",
+      "title": "[수원] 2026년 창작희곡의 발견(낭독극 2편)",
+      "place": "경기아트센터",
+      "startDate": "20260326",
+      "endDate": "20260329",
       "fee": "",
       "realm": "연극",
       "area": "",
       "lat": "",
       "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031321172437449.jpg",
-      "phone": "02-2055-3055",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67177",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_202603252117993335.gif",
+      "phone": "031-230-3316",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67173",
+      "content": "▶ 봤던 영화를 보는 여자 (작가 이민구 / 연출 황이선)\n▶ 하고 싶은 말을 했기로서니 (작가 김성배 / 연출 최원종)"
     },
     {
       "seq": "",
@@ -421,19 +421,19 @@
     },
     {
       "seq": "",
-      "title": "[수원] 2026년 창작희곡의 발견(낭독극 2편)",
-      "place": "경기아트센터",
-      "startDate": "20260326",
-      "endDate": "20260329",
+      "title": "2026 대한민국연극제 서울대회 참가작, NO EXIT (강남지부)",
+      "place": "강남씨어터",
+      "startDate": "20260403",
+      "endDate": "20260404",
       "fee": "",
       "realm": "연극",
       "area": "",
       "lat": "",
       "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_202603252117993335.gif",
-      "phone": "031-230-3316",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67173",
-      "content": "▶ 봤던 영화를 보는 여자 (작가 이민구 / 연출 황이선)\n▶ 하고 싶은 말을 했기로서니 (작가 김성배 / 연출 최원종)"
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/03/rdf_2026031321172437449.jpg",
+      "phone": "02-2055-3055",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67177",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",

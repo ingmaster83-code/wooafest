@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T18:13:12.058529",
+  "updated": "2026-07-16T18:10:50.532648",
   "realm": "아동가족",
   "total": 20,
   "items": [
@@ -21,22 +21,6 @@
     },
     {
       "seq": "",
-      "title": "2026 광주시문화재단 하반기 프로그램 안내",
-      "place": "광주시문화예술의전당",
-      "startDate": "20260701",
-      "endDate": "20261231",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122356421.jpg",
-      "phone": "1522-0338",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71801",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "2026 광장 속 버스킹",
       "place": "김포문화재단",
       "startDate": "20260408",
@@ -49,6 +33,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122489033.jpg",
       "phone": "[홈페이지 내용 참고]",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71798",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 광주시문화재단 하반기 프로그램 안내",
+      "place": "광주시문화예술의전당",
+      "startDate": "20260701",
+      "endDate": "20261231",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122356421.jpg",
+      "phone": "1522-0338",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71801",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
