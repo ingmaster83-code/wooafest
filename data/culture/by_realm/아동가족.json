@@ -1,8 +1,40 @@
 {
-  "updated": "2026-07-22T18:13:06.984389",
+  "updated": "2026-08-02T18:12:51.257099",
   "realm": "아동가족",
-  "total": 20,
+  "total": 22,
   "items": [
+    {
+      "seq": "",
+      "title": "[도고아트홀] 2026년 8월 기획 공연 안내",
+      "place": "도고아트홀",
+      "startDate": "20260801",
+      "endDate": "20260830",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/f4145ff325cf4d1ab2875dac19f32c4d.png",
+      "phone": "도고아트홀 041-542-5145",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72683",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "[서울시립과학관] 2026 한여름의 과학관 - 사이언스매직쇼",
+      "place": "서울시립과학관",
+      "startDate": "20260725",
+      "endDate": "20260802",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/5ec71b33ab684b4eb0b5fc26acdfab7f.jpg",
+      "phone": "서울시립과학관 02-970-4581",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72468",
+      "content": "서울시립과학관 썸머 페스티벌\n2026 한여름의 과학관\n에서 열리는\n\n사이언스 매직쇼\n\n신나는 공연에 초대합니다!"
+    },
     {
       "seq": "",
       "title": "[과천] 2026 재즈로 푸른 밤 <Jazz＆Dance> Vol.1 - Swing",
