@@ -1,8 +1,24 @@
 {
-  "updated": "2026-08-04T18:41:45.307333",
+  "updated": "2026-08-05T18:24:48.589111",
   "realm": "국악",
-  "total": 0,
+  "total": 42,
   "items": [
+    {
+      "seq": "",
+      "title": "[(사)한국음악협회] 2026 국악관현악축제",
+      "place": "국립국악원 예악당",
+      "startDate": "20260828",
+      "endDate": "20260828",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/0260bd6e041c424d80fffcf55f5ac753.jpg",
+      "phone": "02-2655-3060",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72758",
+      "content": "[2026 국악관현악축제]\n\n\n\n&middot; 일시 : 2026. 8. 28.(금) 19:30\n\n&middot; 장소 : 국립국악원 예악당\n\n&middot; 후원 : 문화체육관광부, 서울문화재단, 크라운해태, 국악방송\n\n&middot; 티켓 : 전석 10,000원 (협회 회원 50% 할인)\n\n&middot; 프로그램\n\n&nbsp; 1) &lt;하나의 노래 애국가&gt; (작곡 손다혜)\n\n&nbsp; 2) &lt;청춘가&gt; (작곡 김성국)\n\n&nbsp; 3) 동해안 장구 협주곡 &lt;칠성&gt; (작곡 장성완)\n\n&nbsp; &nbsp; &nbsp; &nbsp; -&nbsp; 협연 : 장구 김태섭\n\n&nbsp; 4) 3중 협주곡 &lt;삼현무&gt; (작곡 서순정)\n\n&nbsp; &nbsp; &nbsp; &nbsp;- 협연 : 해금 김성아, 대금 원완철, 아쟁 조성재\n\n&nbsp; 5) &lt;청산&gt; (작곡 김대성)\n\n\n\n※ 프로그램은 협회 사정에 따라 달라질 수 있습니다."
+    },
     {
       "seq": "",
       "title": "2026 돌담숲풍류 <지브리, 풍류에 빠지다>",
@@ -21,22 +37,6 @@
     },
     {
       "seq": "",
-      "title": "수림뉴웨이브 2026 - 이준 <Golden Hour>",
-      "place": "김희수아트센터 SPACE 1",
-      "startDate": "20260903",
-      "endDate": "20260903",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/95f8252bb9d64d488a1d3fe44f0b8136.png",
-      "phone": "070-4912-8442",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72302",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "수림뉴웨이브 2026 - 정상희 <엇 ː 박>",
       "place": "김희수아트센터 SPACE 1",
       "startDate": "20260827",
@@ -49,6 +49,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/29c3570fb6864173b08408f5205e4324.png",
       "phone": "070-4912-8442",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72301",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "수림뉴웨이브 2026 - 이준 <Golden Hour>",
+      "place": "김희수아트센터 SPACE 1",
+      "startDate": "20260903",
+      "endDate": "20260903",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/95f8252bb9d64d488a1d3fe44f0b8136.png",
+      "phone": "070-4912-8442",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72302",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -501,22 +517,6 @@
     },
     {
       "seq": "",
-      "title": "2026 토요명품 3,4월",
-      "place": "국립국악원 풍류사랑방",
-      "startDate": "20260307",
-      "endDate": "20260404",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/b7bd3f5859a54681b43598c6c1235364.jpg",
-      "phone": "02-580-3300",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65576",
-      "content": "전통 국악을 최적의 공간에서 가장 깊이 있고 다채롭게 만날 수 있는 국립국악원의 대표 주말 공연 &lt;토요명품&gt;한민족의 흥과 신명이 살아 숨 쉬는 노래와 음악, 춤을 비롯해세계가 인정한 유네스코 등재 무형문화유산까지.한국인과 외국인 모두 꼭 봐야할 한국의 전통 공연 예술이매주 토요일, 우면당 무대를 가득 채웁니다.대한민국 최고의 연주가들이 선사하는 &lt;토요명품&gt;을 통해 국악이가진 아름다움을 느껴보세요."
-    },
-    {
-      "seq": "",
       "title": "2026 토요국악동화 4월",
       "place": "국립국악원 풍류사랑방",
       "startDate": "20260404",
@@ -533,19 +533,19 @@
     },
     {
       "seq": "",
-      "title": "2026 국립극장 <완창판소리> 4월",
-      "place": "국립극장 달오름극장",
-      "startDate": "20260411",
-      "endDate": "20260411",
+      "title": "2026 토요명품 3,4월",
+      "place": "국립국악원 풍류사랑방",
+      "startDate": "20260307",
+      "endDate": "20260404",
       "fee": "",
       "realm": "국악",
       "area": "",
       "lat": "",
       "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/a92dc316dcef40ffaf6e10d3b8e733b4.jpg",
-      "phone": "02-2280-4114",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65529",
-      "content": "왕기석 명창의 &lt;수궁가&gt; 미산제.판소리 다섯 바탕, 그 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;"
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/b7bd3f5859a54681b43598c6c1235364.jpg",
+      "phone": "02-580-3300",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65576",
+      "content": "전통 국악을 최적의 공간에서 가장 깊이 있고 다채롭게 만날 수 있는 국립국악원의 대표 주말 공연 &lt;토요명품&gt;한민족의 흥과 신명이 살아 숨 쉬는 노래와 음악, 춤을 비롯해세계가 인정한 유네스코 등재 무형문화유산까지.한국인과 외국인 모두 꼭 봐야할 한국의 전통 공연 예술이매주 토요일, 우면당 무대를 가득 채웁니다.대한민국 최고의 연주가들이 선사하는 &lt;토요명품&gt;을 통해 국악이가진 아름다움을 느껴보세요."
     },
     {
       "seq": "",
@@ -562,6 +562,22 @@
       "phone": "02-2280-4114",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65521",
       "content": "박애리 명창의 &lt;심청가&gt; 강산제.판소리 다섯 바탕, 그 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;"
+    },
+    {
+      "seq": "",
+      "title": "2026 국립극장 <완창판소리> 4월",
+      "place": "국립극장 달오름극장",
+      "startDate": "20260411",
+      "endDate": "20260411",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/a92dc316dcef40ffaf6e10d3b8e733b4.jpg",
+      "phone": "02-2280-4114",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65529",
+      "content": "왕기석 명창의 &lt;수궁가&gt; 미산제.판소리 다섯 바탕, 그 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;"
     },
     {
       "seq": "",
@@ -597,6 +613,22 @@
     },
     {
       "seq": "",
+      "title": "2026 토요명품공연 1,2월",
+      "place": "국립국악원 우면당",
+      "startDate": "20260103",
+      "endDate": "20260228",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_202512161054347071.jpg",
+      "phone": "02-580-3300",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63255",
+      "content": "전통 국악을 최적의 공간에서 가장 깊이 있고 다채롭게 만날 수 있는 국립국악원의 대표 주말 공연 '토요명품'. 한민족의흥과 신면이 살아 숨 쉬는 노래와 음악, 춤을 비롯해 세계가 인정한 유네스코 등재 무형문화유산까지. 한국인과 외국인 모두 꼭 봐야할 한국의 전통 공연 예술이 매주 토요일, 우면당 무대를 가득 채웁니다. 국립국악원 연주단의 수준 높은 연주의 향연, '토요명품'을 통해 전통 국악의 품격과 아름다움을 느껴보세요."
+    },
+    {
+      "seq": "",
       "title": "2026 다담 茶談 2월",
       "place": "국립국악원 우면당",
       "startDate": "20260225",
@@ -626,22 +658,6 @@
       "phone": "02-580-3300",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63256",
       "content": "\"병오년(丙午年) 새해, 상서로운 기운을 담아 여러분의 소망이 이루어지길 기원합니다.\" 조선시대의 정월 초하루. 궁궐과 민간에서 펼쳐지는 화려한 연회, 유쾌한 재담과 국립국악원 연주단이 전하는 멋과 신명이 넘치는 국악으로 설 명절의 특별한 시간을 선물합니다."
-    },
-    {
-      "seq": "",
-      "title": "2026 토요명품공연 1,2월",
-      "place": "국립국악원 우면당",
-      "startDate": "20260103",
-      "endDate": "20260228",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/25/12/show_202512161054347071.jpg",
-      "phone": "02-580-3300",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=63255",
-      "content": "전통 국악을 최적의 공간에서 가장 깊이 있고 다채롭게 만날 수 있는 국립국악원의 대표 주말 공연 '토요명품'. 한민족의흥과 신면이 살아 숨 쉬는 노래와 음악, 춤을 비롯해 세계가 인정한 유네스코 등재 무형문화유산까지. 한국인과 외국인 모두 꼭 봐야할 한국의 전통 공연 예술이 매주 토요일, 우면당 무대를 가득 채웁니다. 국립국악원 연주단의 수준 높은 연주의 향연, '토요명품'을 통해 전통 국악의 품격과 아름다움을 느껴보세요."
     },
     {
       "seq": "",
