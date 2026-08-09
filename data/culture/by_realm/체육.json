@@ -1,8 +1,24 @@
 {
-  "updated": "2026-08-08T17:45:53.160412",
+  "updated": "2026-08-09T17:35:54.752293",
   "realm": "체육",
-  "total": 22,
+  "total": 23,
   "items": [
+    {
+      "seq": "",
+      "title": "서울프린지페스티벌2026, 에움길-The scenic Route",
+      "place": "서보미술문화공간 [서울]",
+      "startDate": "20260809",
+      "endDate": "20260813",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/08/rdf_2026080621183309415.jpeg",
+      "phone": "070-7092-8172",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73316",
+      "content": "UMO Art Lab은 움직임의 가장 원초적인 상태를 탐구하는 실험예술 프로젝트 그룹입니다.\n\n우리는 완성된 형태보다 그 이전의 순간, 언어가 되기 전의 감각과 충동, 그리고 신체 안에서 발생하는 본질적인 에너지에 주목합니다.\n\n무용, 연극, 음악, 퍼포먼스를 기반으로 장르의 경계를 넘나들며, 사회가 규정한 움직임과 인식을 해체하고 새로운 신체 언어를 발견하는 작업을 이어갑니다.\n\n태어나지 않았기에 무한한 가능성을 가진 움직임.\nUMO는 그 최초의 진동과 마주하는 예술적 실험을 지속합니다."
+    },
     {
       "seq": "",
       "title": "[도고아트홀] 2026년 8월 기획 공연 안내",
@@ -37,22 +53,6 @@
     },
     {
       "seq": "",
-      "title": "2026 광장 속 버스킹",
-      "place": "김포문화재단",
-      "startDate": "20260408",
-      "endDate": "20261028",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122489033.jpg",
-      "phone": "[홈페이지 내용 참고]",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71798",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "[과천] 2026 재즈로 푸른 밤 <Jazz＆Dance> Vol.1 - Swing",
       "place": "과천시민회관 소극장",
       "startDate": "20260704",
@@ -81,6 +81,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122356421.jpg",
       "phone": "1522-0338",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71801",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 광장 속 버스킹",
+      "place": "김포문화재단",
+      "startDate": "20260408",
+      "endDate": "20261028",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122489033.jpg",
+      "phone": "[홈페이지 내용 참고]",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71798",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -165,22 +181,6 @@
     },
     {
       "seq": "",
-      "title": "[도고아트홀] 2026년 6월 기획 공연 안내",
-      "place": "도고아트홀",
-      "startDate": "20260606",
-      "endDate": "20260628",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202605/1fbb4908dbb7415099982b052292c75c.png",
-      "phone": "도고아트홀 041-542-5145",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70005",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "어반브레이크 & 토이콘 서울 2026",
       "place": "코엑스 D홀",
       "startDate": "20260730",
@@ -194,6 +194,22 @@
       "phone": "1661-0118",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70007",
       "content": "아토토이, 그래피티, IP, 회화, 오브제, 컬렉터블 문화까지 하나의 공간에서 동시에 경험하는 새로운 아티스트 페스티벌"
+    },
+    {
+      "seq": "",
+      "title": "[도고아트홀] 2026년 6월 기획 공연 안내",
+      "place": "도고아트홀",
+      "startDate": "20260606",
+      "endDate": "20260628",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202605/1fbb4908dbb7415099982b052292c75c.png",
+      "phone": "도고아트홀 041-542-5145",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70005",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
