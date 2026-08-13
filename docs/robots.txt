@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+
+User-agent: Daum
+Allow: /
+
 Sitemap: https://wooafest.wooahouse.com/sitemap.xml
 
 #DaumWebMasterTool:c41634ab81cc8a92fa5711dda56ade7a42d4cf6fbf6421554ce80ec33dc2e000:5OHFs/qHHlfCvAas17iLzw==
