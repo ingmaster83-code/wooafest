@@ -1,8 +1,24 @@
 {
-  "updated": "2026-08-02T18:12:48.904067",
+  "updated": "2026-08-12T18:09:55.137459",
   "realm": "오페라",
-  "total": 7,
+  "total": 0,
   "items": [
+    {
+      "seq": "",
+      "title": "2026 창작오페라 <이중섭> 10주년 기념 공연",
+      "place": "서귀포예술의전당 대극장",
+      "startDate": "20260904",
+      "endDate": "20260905",
+      "fee": "",
+      "realm": "오페라",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/1fb63d8261a1411291404293721489f8.jpg",
+      "phone": "제주특별자치도립 서귀포예술단 사무국 064-739-0641",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=72876",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "누오바오페라단 2026년 정기오페라, 호프만의 이야기",
