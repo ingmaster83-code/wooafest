@@ -1,8 +1,24 @@
 {
-  "updated": "2026-08-13T18:00:00.800458",
+  "updated": "2026-08-14T17:55:39.699937",
   "realm": "뮤지컬",
-  "total": 0,
+  "total": 14,
   "items": [
+    {
+      "seq": "",
+      "title": "[안동] 2026 창작가무극 독립의혼 임청각 '대동의 꿈'",
+      "place": "안동문화예술의전당 웅부홀",
+      "startDate": "20260813",
+      "endDate": "20260813",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_2026072821171144970.jpg",
+      "phone": "054-859-5686",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73467",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "서울프린지페스티벌2026, 오목한 눈, 흐르는 귀, 떨리는 뼈",
