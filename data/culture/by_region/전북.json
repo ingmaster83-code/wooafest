@@ -1,8 +1,23 @@
 {
-  "updated": "2026-08-18T17:31:17.393348",
+  "updated": "2026-08-19T17:29:52.152903",
   "region": "전북",
   "total": 10,
   "items": [
+    {
+      "seq": "393376",
+      "title": "오백에 삼십",
+      "place": "JTN아트홀",
+      "startDate": "20151121",
+      "endDate": "20261231",
+      "fee": "",
+      "realm": "연극",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202608/a4629ff32ba140548694a7230176c392.jpg",
+      "phone": "",
+      "url": ""
+    },
     {
       "seq": "319005",
       "title": "패트릭 블랑: 수직정원",
@@ -135,21 +150,6 @@
       "lat": "",
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/22/08/show_2022082315161227864.png",
-      "phone": "",
-      "url": ""
-    },
-    {
-      "seq": "249345",
-      "title": "그리스가 로마에게, 로마가 그리스에게",
-      "place": "국립중앙박물관 대강당",
-      "startDate": "20230615",
-      "endDate": "20270530",
-      "fee": "",
-      "realm": "전시",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/23/06/show_2023063016151387255.jpg",
       "phone": "",
       "url": ""
     }
