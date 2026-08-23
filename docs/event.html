@@ -139,24 +139,7 @@ async function loadEvent() {
     } catch(e) {}
   }
 
-  // 1) API 상세 조회 시도
-  if (seq) {
-    try {
-      const apiUrl = `https://apis.data.go.kr/B553457/cultureinfo/detail2?serviceKey=${encodeURIComponent('API_KEY_PLACEHOLDER')}&seq=${seq}&format=json`;
-      const res = await fetch(apiUrl);
-      if (res.ok) {
-        const data = await res.json();
-        const item = data?.body?.items?.item?.[0] || data?.response?.body?.items?.item?.[0];
-        if (item) {
-          evData = normalizeAPIItem(item);
-          renderDetail();
-          return;
-        }
-      }
-    } catch(e) {}
-  }
-
-  // 2) 로컬 JSON에서 검색
+  // 1) 로컬 JSON에서 검색
   try {
     const [weekRes, festRes, perfRes] = await Promise.all([
       fetch('data/culture/this_week.json').catch(()=>null),
@@ -200,24 +183,6 @@ async function loadEvent() {
   } catch(e) {
     card.innerHTML = '<div class="empty">행사 정보를 불러올 수 없습니다.</div>';
   }
-}
-
-function normalizeAPIItem(item) {
-  return {
-    title: item.title||item.TITLE||'',
-    place: item.place||item.PLACE||'',
-    startDate: (item.startDate||item.STARTDATE||'').replace(/-/g,''),
-    endDate: (item.endDate||item.ENDDATE||'').replace(/-/g,''),
-    content: item.contents||item.CONTENTS||'',
-    lat: item.lat||item.LAT||'',
-    lng: item.lng||item.LNG||'',
-    fee: item.price||item.PRICE||'',
-    realm: item.realmName||item.REALMNAME||'행사',
-    tel: item.phone||item.PHONE||'',
-    homepage: item.url||item.URL||'',
-    parking: item.parking||'',
-    age: item.age||''
-  };
 }
 
 function renderDetail() {
