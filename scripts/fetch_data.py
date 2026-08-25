@@ -16,6 +16,24 @@ CULTURE_API_KEY = os.environ.get('CULTURE_API_KEY', '')
 BASE_URL = 'https://apis.data.go.kr/B553457/cultureinfo'
 CULTURE_BASE_URL = 'https://api.kcisa.kr/openapi/CNV_060/request'
 DATA_DIR = Path(__file__).parent.parent / 'data' / 'culture'
+FESTIVAL_JSON_PATH = Path(__file__).parent.parent / 'data' / 'festival.json'
+
+# 전국문화축제표준데이터 (data.go.kr publicDataPk=15013104, 문화체육관광부/한국관광공사, 분기별 갱신)
+# www.data.go.kr가 제공하는 공개 다운로드 엔드포인트라 serviceKey 없이도 받을 수 있고,
+# api.data.go.kr/apis.data.go.kr 계열과 달리 GitHub Actions IP에서도 정상 동작함
+# (wooatrash에서 같은 방식으로 검증됨). festival.json은 2026-06-29 최초 커밋 이후 이 데이터셋을
+# 한 번 내려받아 넣기만 하고 자동 갱신 파이프라인이 없어 계속 고정돼 있었음 — 이 함수가 그 갱신을 담당한다.
+FESTIVAL_DOWNLOAD_URL = 'https://www.data.go.kr/download/standard.json'
+FESTIVAL_PUBLIC_DATA_PK = '15013104'
+FESTIVAL_SVC_TABLE_NM = 'tn_pubr_public_cltur_fstvl_svc'
+FESTIVAL_FIELD_MAP = {
+    'FSTVL_NM': '축제명', 'OPAR': '개최장소', 'FSTVL_START_DATE': '축제시작일자',
+    'FSTVL_END_DATE': '축제종료일자', 'FSTVL_CO': '축제내용', 'MNNST_NM': '주관기관명',
+    'AUSPC_INSTT_NM': '주최기관명', 'SUPRT_INSTT_NM': '후원기관명', 'PHONE_NUMBER': '전화번호',
+    'HOMEPAGE_URL': '홈페이지주소', 'RELATE_INFO': '관련정보', 'RDNMADR': '소재지도로명주소',
+    'LNMADR': '소재지지번주소', 'LATITUDE': '위도', 'LONGITUDE': '경도',
+    'REFERENCE_DATE': '데이터기준일자', 'INSTT_CODE': '제공기관코드', 'INSTT_NM': '제공기관명',
+}
 
 REGIONS = ['서울', '경기', '인천', '부산', '대구', '광주', '대전', '울산', '세종',
            '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주']
@@ -250,6 +268,60 @@ def fetch_by_realm():
         time.sleep(0.3)
 
 
+def fetch_festival_standard_dataset():
+    """전국문화축제표준데이터를 받아 festival.json으로 저장 (모듈 상단 주석 참고)."""
+    print("\n📥 전국문화축제표준데이터 수집 중...")
+    all_records = []
+    page = 1
+    per_page = 5000
+    while True:
+        params = [('publicDataPk', FESTIVAL_PUBLIC_DATA_PK)]
+        # INSTT_CODE/INSTT_NM은 colNmList에 넣으면 서버가 빈 응답을 줌(원인불명) —
+        # 요청 안 해도 응답에 자동 포함되므로 여기선 빼고 요청한다
+        params += [('colNmList', c) for c in FESTIVAL_FIELD_MAP if c not in ('INSTT_CODE', 'INSTT_NM')]
+        params += [
+            ('perPage', per_page),
+            ('page', page),
+            ('svcTableNm', FESTIVAL_SVC_TABLE_NM),
+            ('totalCount', '999999'),
+        ]
+        url = FESTIVAL_DOWNLOAD_URL + '?' + urllib.parse.urlencode(params)
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                items = json.loads(resp.read().decode('utf-8'))
+        except Exception as e:
+            print(f"  ⚠️  festival 표준데이터셋 fetch 실패: {e}")
+            break
+
+        if not items:
+            break
+
+        for it in items:
+            record = {}
+            for api_key, kor_key in FESTIVAL_FIELD_MAP.items():
+                v = it.get(api_key, '')
+                record[kor_key] = '' if v is None or v == 'null' else v
+            all_records.append(record)
+
+        print(f"  {page}페이지 완료 (누적 {len(all_records)}건)")
+        if len(items) < per_page:
+            break
+        page += 1
+        time.sleep(0.3)
+
+    if not all_records:
+        print("  ⚠️  0건 수집됨 — 기존 festival.json을 그대로 둠")
+        return
+
+    fields = [{'id': kor} for kor in FESTIVAL_FIELD_MAP.values()]
+    FESTIVAL_JSON_PATH.write_text(
+        json.dumps({'fields': fields, 'records': all_records}, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
+    print(f"  ✅ 저장: {FESTIVAL_JSON_PATH} ({len(all_records)}건)")
+
+
 if __name__ == '__main__':
     print("🎪 wooafest 데이터 수집 시작")
     print(f"   시각: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -265,5 +337,6 @@ if __name__ == '__main__':
     fetch_period('M', DATA_DIR / 'this_month.json', '이번달 행사')
     fetch_by_region()
     fetch_by_realm()
+    fetch_festival_standard_dataset()
 
     print("\n✅ 데이터 수집 완료!")
