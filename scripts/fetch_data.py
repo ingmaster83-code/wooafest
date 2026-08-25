@@ -35,6 +35,11 @@ FESTIVAL_FIELD_MAP = {
     'REFERENCE_DATE': '데이터기준일자', 'INSTT_CODE': '제공기관코드', 'INSTT_NM': '제공기관명',
 }
 
+# 마라톤 API (apizoa.com, 인증키 불필요, 무료 요금제 월 1,000회 — 2026-08-25 확인)
+# 필터 없이 한 번 호출하면 전체 데이터(280건, nextCursor 없음)가 다 옴 — 별도 페이지네이션 불필요.
+MARATHON_API_URL = 'https://apizoa.com/api/v1/marathons'
+MARATHON_JSON_PATH = Path(__file__).parent.parent / 'data' / 'marathon.json'
+
 REGIONS = ['서울', '경기', '인천', '부산', '대구', '광주', '대전', '울산', '세종',
            '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주']
 
@@ -328,6 +333,29 @@ def fetch_festival_standard_dataset():
     print(f"  ✅ 저장: {FESTIVAL_JSON_PATH} ({len(all_records)}건)")
 
 
+def fetch_marathon_data():
+    """apizoa.com 마라톤 API를 받아 marathon.json으로 저장 (모듈 상단 주석 참고)."""
+    print("\n📥 마라톤 대회 데이터 수집 중...")
+    req = urllib.request.Request(MARATHON_API_URL, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = json.loads(resp.read().decode('utf-8'))
+    except Exception as e:
+        print(f"  ⚠️  마라톤 API fetch 실패: {e}")
+        return
+
+    items = body.get('data', [])
+    if not items:
+        print("  ⚠️  0건 수집됨 — 기존 marathon.json을 그대로 둠")
+        return
+
+    MARATHON_JSON_PATH.write_text(
+        json.dumps({'updated': datetime.now().isoformat(), 'total': len(items), 'items': items}, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
+    print(f"  ✅ 저장: {MARATHON_JSON_PATH} ({len(items)}건)")
+
+
 if __name__ == '__main__':
     print("🎪 wooafest 데이터 수집 시작")
     print(f"   시각: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -342,6 +370,7 @@ if __name__ == '__main__':
     fetch_by_region()
     fetch_by_realm()
     fetch_festival_standard_dataset()
+    fetch_marathon_data()
 
     # this_week/this_month은 위 by_realm/*.json을 날짜로 필터링해서 만들므로 반드시 이후에 실행
     fetch_period('W', DATA_DIR / 'this_week.json', '이번주 행사')

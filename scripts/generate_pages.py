@@ -20,12 +20,12 @@ REGION_EMOJI = {
     '경남': '🌸', '제주': '🍊'
 }
 
-REALMS = ['축제', '공연', '전시', '아동가족', '교육체험', '체육', '연극', '음악', '국악', '무용', '뮤지컬', '오페라']
+REALMS = ['축제', '공연', '전시', '아동가족', '교육체험', '체육', '연극', '음악', '국악', '무용', '뮤지컬', '오페라', '마라톤']
 
 REALM_EMOJI = {
     '축제': '🎭', '공연': '🎵', '전시': '🖼️', '아동가족': '👨‍👩‍👧',
     '교육체험': '🎓', '체육': '⚽', '연극': '🎭', '음악': '🎸',
-    '국악': '🥁', '무용': '💃', '뮤지컬': '🎤', '오페라': '🎼'
+    '국악': '🥁', '무용': '💃', '뮤지컬': '🎤', '오페라': '🎼', '마라톤': '🏃'
 }
 
 REALM_SEO = {
@@ -40,7 +40,8 @@ REALM_SEO = {
     '국악': ('전국 국악 공연 2026', '전국 국악 공연 일정을 확인하세요.'),
     '무용': ('전국 무용 공연 2026', '전국 무용, 발레 공연 일정을 확인하세요.'),
     '뮤지컬': ('전국 뮤지컬 2026', '전국 뮤지컬 공연 일정을 확인하세요.'),
-    '오페라': ('전국 오페라 2026', '전국 오페라 공연 일정을 확인하세요.')
+    '오페라': ('전국 오페라 2026', '전국 오페라 공연 일정을 확인하세요.'),
+    '마라톤': ('전국 마라톤 대회 일정 2026', '전국 마라톤·러닝 대회 일정과 접수 정보를 확인하세요.')
 }
 
 
@@ -56,6 +57,39 @@ def load_json(path):
 
 def esc(s):
     return str(s or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+
+
+def normalize_marathon_item(r):
+    """apizoa.com 마라톤 API의 중첩 구조를 다른 realm과 같은 평평한 카드 형식으로 변환."""
+    ev = r.get('event') or {}
+    loc = r.get('location') or {}
+    reg = r.get('registration') or {}
+    hosts = r.get('hosts') or {}
+    info = r.get('info') or {}
+    price = reg.get('price') or {}
+    fee = ', '.join(
+        f"{k} {v:,}원" if isinstance(v, (int, float)) else f"{k} {v}"
+        for k, v in price.items()
+    )
+    return {
+        'title': r.get('name', ''),
+        'place': loc.get('venue') or '',
+        'startDate': str(ev.get('startDate') or '').replace('-', ''),
+        'endDate': str(ev.get('endDate') or ev.get('startDate') or '').replace('-', ''),
+        'lat': loc.get('latitude'), 'lng': loc.get('longitude'),
+        'region': loc.get('region') or '',
+        'address': loc.get('address') or '',
+        'homepage': info.get('site') or ev.get('site') or '',
+        'tel': hosts.get('phone') or '',
+        'content': r.get('description', ''),
+        'realm': '마라톤', 'fee': fee, 'seq': r.get('id', ''),
+        'organizer': hosts.get('organizer') or '', 'host': hosts.get('manager') or '',
+        'reg_start': str(reg.get('startDate') or '').replace('-', ''),
+        'reg_end': str(reg.get('endDate') or '').replace('-', ''),
+        'reg_status': reg.get('status') or '',
+        'event_type': info.get('type') or '', 'scale': info.get('scale'),
+        'souvenir': info.get('souvenir') or '',
+    }
 
 
 def fmt_date(d):
@@ -97,7 +131,7 @@ def realm_badge(realm):
     cls_map = {'축제': 'festival', '공연': 'performance', '음악': 'performance',
                '연극': 'performance', '전시': 'exhibition', '무용': 'exhibition',
                '뮤지컬': 'exhibition', '오페라': 'exhibition', '아동가족': 'family',
-               '교육체험': 'edu', '체육': 'sports'}
+               '교육체험': 'edu', '체육': 'sports', '마라톤': 'sports'}
     cls = next((v for k, v in cls_map.items() if k in str(realm)), '')
     return f'<span class="badge badge-{cls}">{esc(realm)}</span>'
 
@@ -140,7 +174,7 @@ def header_html(active=''):
 def footer_html():
     return '''<footer class="footer"><div class="footer-inner"><div class="footer-grid">
   <div class="footer-col"><h4>🎪 우아축제</h4><p>전국 문화행사 정보 허브</p><a href="https://wooahouse.com" target="_blank" style="margin-top:10px;display:inline-block;color:#10B981">wooahouse.com →</a></div>
-  <div class="footer-col"><h4>분야별</h4><a href="/분야/축제.html">축제</a><a href="/분야/공연.html">공연</a><a href="/분야/전시.html">전시</a><a href="/분야/아동가족.html">아동가족</a></div>
+  <div class="footer-col"><h4>분야별</h4><a href="/분야/축제.html">축제</a><a href="/분야/공연.html">공연</a><a href="/분야/전시.html">전시</a><a href="/분야/마라톤.html">마라톤</a></div>
   <div class="footer-col"><h4>지역별</h4><a href="/지역/서울.html">서울</a><a href="/지역/경기.html">경기</a><a href="/지역/부산.html">부산</a><a href="/지역/제주.html">제주</a></div>
   <div class="footer-col"><h4>정보</h4><a href="/about.html">서비스 소개</a><a href="/privacy.html">개인정보처리방침</a></div>
 </div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div></div></footer>'''
@@ -189,6 +223,15 @@ def generate_region_page(region):
                 'content': r.get('축제내용', ''),
                 'realm': '축제', 'fee': '', 'seq': ''
             })
+
+    # 마라톤 JSON에서 해당 지역 필터링 (location.region이 이미 깨끗한 지역명이라 별칭 매칭 불필요)
+    mar_items = load_json(DATA / 'marathon.json')
+    if isinstance(mar_items, dict):
+        mar_items = mar_items.get('items', [])
+    for r in mar_items:
+        loc = (r.get('location') or {})
+        if loc.get('region') == region:
+            items.append(normalize_marathon_item(r))
 
     today = datetime.now().strftime('%Y%m%d')
     items = [ev for ev in items if (ev.get('endDate') or '99991231') >= today]
@@ -283,6 +326,7 @@ def generate_region_page(region):
     <a href="../분야/아동가족.html" class="domain-card family"><span class="icon">👨‍👩‍👧</span><span class="name">아동가족</span></a>
     <a href="../분야/교육체험.html" class="domain-card"><span class="icon">🎓</span><span class="name">교육체험</span></a>
     <a href="../분야/체육.html" class="domain-card"><span class="icon">⚽</span><span class="name">체육</span></a>
+    <a href="../분야/마라톤.html" class="domain-card"><span class="icon">🏃</span><span class="name">마라톤</span></a>
   </div>
 </div>
 
@@ -331,6 +375,13 @@ def generate_realm_page(realm):
                 'content': r.get('축제내용', ''),
                 'realm': '축제', 'fee': '', 'seq': ''
             })
+
+    if realm == '마라톤':
+        mar_items = load_json(DATA / 'marathon.json')
+        if isinstance(mar_items, dict):
+            mar_items = mar_items.get('items', [])
+        for r in mar_items:
+            items.append(normalize_marathon_item(r))
 
     today = datetime.now().strftime('%Y%m%d')
     items = [ev for ev in items if (ev.get('endDate') or '99991231') >= today]
@@ -685,7 +736,184 @@ def generate_festival_pages():
     return sitemap_entries
 
 
-def generate_sitemap(festival_urls=None):
+def generate_marathon_pages():
+    mar_dir = DOCS / '마라톤'
+    if mar_dir.exists():
+        import shutil
+        shutil.rmtree(mar_dir)
+    mar_dir.mkdir(parents=True)
+
+    mar_data = load_json(DATA / 'marathon.json')
+    records = mar_data.get('items', []) if isinstance(mar_data, dict) else mar_data
+
+    generated = 0
+    sitemap_entries = []
+
+    for r in records:
+        name = (r.get('name') or '').strip()
+        slug = r.get('slug') or r.get('id') or ''
+        if not name or not slug:
+            continue
+
+        m = normalize_marathon_item(r)
+        place, address = m['place'], m['address']
+        start, end = m['startDate'], m['endDate']
+        content = m['content']
+        tel, homepage = m['tel'], m['homepage']
+        organizer, host = m['organizer'], m['host']
+        lat, lng, region = m['lat'], m['lng'], m['region']
+        fee = m['fee']
+        reg_start, reg_end, reg_status = m['reg_start'], m['reg_end'], m['reg_status']
+        event_type, scale, souvenir = m['event_type'], m['scale'], m['souvenir']
+
+        start_fmt, end_fmt = fmt_date(start), fmt_date(end)
+        reg_start_fmt, reg_end_fmt = fmt_date(reg_start), fmt_date(reg_end)
+        year_str = start[:4] if len(start) >= 4 else str(datetime.now().year)
+        month_str = f"{start[4:6]}월" if len(start) >= 6 else ''
+        dday = dday_badge(end, start)
+
+        if not content or len(content.strip()) < 10:
+            place_desc = f"{place}에서" if place else ""
+            org_desc = f"{organizer} 주최로 " if organizer else ""
+            content = f"{name}은 {year_str}년 {month_str} {region + ' ' if region else ''}{place_desc} {org_desc}열리는 마라톤 대회입니다."
+
+        desc_parts = [f"{name}은 {start_fmt}"]
+        if place:
+            desc_parts.append(f"{place}에서 열립니다")
+        desc = '. '.join(desc_parts) + f". {region} 마라톤 일정·접수·참가비 안내." if region else '. '.join(desc_parts) + " 일정·접수·참가비 안내."
+
+        kw_parts = [name, f"{name} {year_str}", f"{name} 접수", f"{name} 참가비"]
+        if region:
+            kw_parts += [f"{region} 마라톤", f"{region} {month_str} 마라톤", f"{region} 러닝대회"]
+        if month_str:
+            kw_parts += [f"{month_str} 마라톤 일정", f"{month_str} 전국 마라톤"]
+        keywords = ', '.join(kw_parts)
+
+        start_iso = f"{start[:4]}-{start[4:6]}-{start[6:8]}" if len(start) == 8 else ''
+        end_iso = f"{end[:4]}-{end[4:6]}-{end[6:8]}" if len(end) == 8 else ''
+        ldjson = f'''{{"@context":"https://schema.org","@type":"SportsEvent","name":"{esc(name)}","startDate":"{start_iso}","endDate":"{end_iso}","location":{{"@type":"Place","name":"{esc(place)}","address":"{esc(address)}"}},"organizer":{{"@type":"Organization","name":"{esc(organizer or host)}"}},"description":"{esc(content[:200])}"}}'''
+
+        url_path = f"https://wooafest.wooahouse.com/마라톤/{slug}.html"
+        region_link = f'<a href="../지역/{region}.html">{region} 마라톤 전체보기 →</a>' if region else ''
+
+        html = f'''<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{esc(name)} {year_str} — {esc(place)} | 우아축제</title>
+<meta name="description" content="{esc(desc[:155])}">
+<meta name="keywords" content="{esc(keywords)}">
+<link rel="canonical" href="{url_path}">
+<meta property="og:title" content="{esc(name)} {year_str} | 우아축제">
+<meta property="og:description" content="{esc(desc[:100])}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{url_path}">
+<meta property="og:site_name" content="우아축제">
+<script type="application/ld+json">{ldjson}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo"><span>🎪</span>우아축제</a>
+    <nav class="header-nav">
+      <a href="../calendar.html">문화캘린더</a>
+      <a href="../지역/서울.html">지역별</a>
+      <a href="../분야/축제.html">분야별</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-top"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704"></ins></div>
+
+<div class="main-layout" style="padding:20px">
+  <div class="main-content">
+    <div class="breadcrumb">
+      <a href="/">홈</a><span>›</span>
+      <a href="../분야/마라톤.html">마라톤</a><span>›</span>
+      {f'<a href="../지역/{region}.html">{region}</a><span>›</span>' if region else ''}
+      <span>{esc(name)}</span>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-title">{esc(name)}</div>
+      <div class="event-card-badges" style="margin-bottom:16px">
+        <span class="badge badge-sports">🏃 마라톤</span>
+        {free_badge(fee)}
+        {dday}
+      </div>
+      <div class="detail-grid">
+        <div class="detail-item"><span class="label">📅 대회일</span><span class="value">{start_fmt}{'~'+end_fmt if end_fmt and end_fmt!=start_fmt else ''}</span></div>
+        {f'<div class="detail-item"><span class="label">📍 장소</span><span class="value">{esc(place)}</span></div>' if place else ''}
+        {f'<div class="detail-item"><span class="label">🗺️ 주소</span><span class="value">{esc(address)}</span></div>' if address else ''}
+        {f'<div class="detail-item"><span class="label">🏷️ 대회유형</span><span class="value">{esc(event_type)}</span></div>' if event_type else ''}
+        {f'<div class="detail-item"><span class="label">👥 참가규모</span><span class="value">{scale:,}명</span></div>' if isinstance(scale, (int, float)) else ''}
+        {f'<div class="detail-item"><span class="label">📝 접수기간</span><span class="value">{reg_start_fmt}{"~"+reg_end_fmt if reg_end_fmt and reg_end_fmt!=reg_start_fmt else ""}</span></div>' if reg_start_fmt else ''}
+        {f'<div class="detail-item"><span class="label">📌 접수상태</span><span class="value">{esc(reg_status)}</span></div>' if reg_status else ''}
+        {f'<div class="detail-item"><span class="label">💰 참가비</span><span class="value">{esc(fee)}</span></div>' if fee else ''}
+        {f'<div class="detail-item"><span class="label">🎁 기념품</span><span class="value">{esc(souvenir)}</span></div>' if souvenir else ''}
+        {f'<div class="detail-item"><span class="label">🏢 주최</span><span class="value">{esc(organizer)}</span></div>' if organizer else ''}
+        {f'<div class="detail-item"><span class="label">📋 주관</span><span class="value">{esc(host)}</span></div>' if host and host != organizer else ''}
+        {f'<div class="detail-item"><span class="label">📞 문의</span><span class="value"><a href="tel:{esc(tel)}" style="color:var(--primary)">{esc(tel)}</a></span></div>' if tel else ''}
+        {f'<div class="detail-item"><span class="label">🌐 홈페이지</span><span class="value"><a href="{esc(homepage)}" target="_blank" rel="noopener" style="color:var(--primary)">바로가기 →</a></span></div>' if homepage else ''}
+      </div>
+    </div>
+
+    {f'<div class="detail-card"><h2 style="font-size:1rem;font-weight:700;margin-bottom:12px">대회 소개</h2><p style="line-height:1.8;color:var(--text-secondary)">{esc(content)}</p></div>' if content else ''}
+
+    {'<div class="detail-card"><div style="text-align:center"><button onclick="openParking()" style="padding:10px 24px;background:#10B981;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem;font-weight:600">🅿️ 근처 주차장 확인 →</button></div></div>' if (lat and lng) or address else ''}
+
+    <div class="ad-middle"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025"></ins></div>
+
+    <div class="detail-card" style="background:var(--primary-light)">
+      <h2 style="font-size:1rem;font-weight:700;margin-bottom:12px">🔗 관련 페이지</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="../분야/마라톤.html" class="region-link">🏃 전국 마라톤 전체보기</a>
+        {f'<a href="../지역/{region}.html" class="region-link">{REGION_EMOJI.get(region,"")} {region} 행사 전체보기</a>' if region else ''}
+        <a href="../calendar.html" class="region-link">📅 문화캘린더</a>
+      </div>
+    </div>
+  </div>
+
+  <aside class="main-sidebar">
+    <div class="sidebar-ad"><ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="6255378195"></ins></div>
+  </aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid">
+  <div class="footer-col"><h4>🎪 우아축제</h4><p>전국 축제·공연·행사 정보 허브</p><a href="https://wooahouse.com" target="_blank" style="margin-top:10px;display:inline-block;color:#10B981">wooahouse.com →</a></div>
+  <div class="footer-col"><h4>분야별</h4><a href="../분야/축제.html">축제</a><a href="../분야/공연.html">공연</a><a href="../분야/전시.html">전시</a><a href="../분야/마라톤.html">마라톤</a></div>
+  <div class="footer-col"><h4>지역별</h4><a href="../지역/서울.html">서울</a><a href="../지역/경기.html">경기</a><a href="../지역/부산.html">부산</a><a href="../지역/제주.html">제주</a></div>
+  <div class="footer-col"><h4>정보</h4><a href="../about.html">서비스 소개</a><a href="../privacy.html">개인정보처리방침</a></div>
+</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div></div></footer>
+
+<script>
+{'function openParking(){window.open("https://wooaparking.wooahouse.com/?lat='+str(lat)+'&lng='+str(lng)+'","_blank")}' if lat and lng else ('function openParking(){window.open("https://wooaparking.wooahouse.com/?q='+esc(address).replace('"','')+'","_blank")}' if address else '')}
+(adsbygoogle=window.adsbygoogle||[]).push({{}});
+(adsbygoogle=window.adsbygoogle||[]).push({{}});
+(adsbygoogle=window.adsbygoogle||[]).push({{}});
+</script>
+<script>window.PWA_CONFIG={{appName:"우아축제",themeColor:"#7C3AED",icon:"🎪",convertIds:[]}};</script>
+<script src="../js/pwa-install.js"></script>
+</body>
+</html>'''
+
+        fname = mar_dir / f"{slug}.html"
+        fname.write_text(html, encoding='utf-8')
+        sitemap_entries.append((url_path, 'weekly', '0.7'))
+        generated += 1
+
+    print(f"  ✅ 마라톤 개별 페이지 {generated}개 생성 완료")
+    return sitemap_entries
+
+
+def generate_sitemap(festival_urls=None, marathon_urls=None):
     today = datetime.now().strftime('%Y-%m-%d')
     urls = [
         ('https://wooafest.wooahouse.com/', 'daily', '1.0'),
@@ -699,6 +927,8 @@ def generate_sitemap(festival_urls=None):
         urls.append((f'https://wooafest.wooahouse.com/분야/{r}.html', 'weekly', '0.8'))
     if festival_urls:
         urls.extend(festival_urls)
+    if marathon_urls:
+        urls.extend(marathon_urls)
 
     xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, freq, pri in urls:
@@ -725,7 +955,10 @@ if __name__ == '__main__':
     print("\n📄 축제 개별 페이지 생성...")
     festival_urls = generate_festival_pages()
 
+    print("\n📄 마라톤 개별 페이지 생성...")
+    marathon_urls = generate_marathon_pages()
+
     print("\n📄 sitemap.xml 갱신...")
-    generate_sitemap(festival_urls)
+    generate_sitemap(festival_urls, marathon_urls)
 
     print("\n✅ 페이지 생성 완료!")
