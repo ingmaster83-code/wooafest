@@ -92,6 +92,21 @@ def normalize_marathon_item(r):
     }
 
 
+def normalize_sports_item(r):
+    """sports_events.json 항목(이미 평평한 카드 형식)에 지역 태그만 추가."""
+    place = r.get('place', '')
+    region = ''
+    for reg in REGIONS:
+        if place.startswith(reg):
+            region = reg
+            break
+    if not region:
+        region = get_region_from_address(place)
+    out = dict(r)
+    out['region'] = region
+    return out
+
+
 def fmt_date(d):
     s = str(d or '').replace('-', '').replace('/', '')
     if len(s) == 8:
@@ -233,6 +248,14 @@ def generate_region_page(region):
         if loc.get('region') == region:
             items.append(normalize_marathon_item(r))
 
+    # 체육대회 JSON에서 해당 지역 필터링
+    sports_items = load_json(DATA / 'sports_events.json')
+    if isinstance(sports_items, dict):
+        sports_items = sports_items.get('items', [])
+    for r in sports_items:
+        if r.get('place', '').startswith(region) or any(a in r.get('place', '') for a in aliases):
+            items.append(normalize_sports_item(r))
+
     today = datetime.now().strftime('%Y%m%d')
     items = [ev for ev in items if (ev.get('endDate') or '99991231') >= today]
     cards_html = ''.join(event_card_html(ev, i) for i, ev in enumerate(items[:30]))
@@ -357,7 +380,8 @@ function setFilter(realm, btn) {{
 def generate_realm_page(realm):
     emoji = REALM_EMOJI.get(realm, '🎪')
     seo_title, seo_desc = REALM_SEO.get(realm, (f'전국 {realm} 2026', f'전국 {realm} 행사를 확인하세요.'))
-    items = load_json(DATA / 'culture' / 'by_realm' / f'{realm}.json')
+    # 체육은 문화예술API(dtype=기타)를 더 안 쓰므로 by_realm/체육.json(옛 잔재)을 기본값으로 읽지 않는다
+    items = [] if realm == '체육' else load_json(DATA / 'culture' / 'by_realm' / f'{realm}.json')
 
     if realm == '축제':
         fest_items = load_json(DATA / 'festival.json')
@@ -382,6 +406,13 @@ def generate_realm_page(realm):
             mar_items = mar_items.get('items', [])
         for r in mar_items:
             items.append(normalize_marathon_item(r))
+
+    if realm == '체육':
+        sports_items = load_json(DATA / 'sports_events.json')
+        if isinstance(sports_items, dict):
+            sports_items = sports_items.get('items', [])
+        for r in sports_items:
+            items.append(normalize_sports_item(r))
 
     today = datetime.now().strftime('%Y%m%d')
     items = [ev for ev in items if (ev.get('endDate') or '99991231') >= today]

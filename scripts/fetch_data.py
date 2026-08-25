@@ -4,6 +4,7 @@ fetch_data.py — 한눈에보는문화정보 API 수집 스크립트
 """
 import os
 import json
+import re
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
@@ -57,12 +58,22 @@ REALMS = {
 }
 
 # 새 문화예술공연(통합) API의 dtype 매핑 (유효값: 연극,뮤지컬,오페라,음악,콘서트,국악,무용,전시,기타)
+# 체육은 여기서 뺐음 — dtype='기타'로 받으면 실제로는 재즈댄스/한국무용 같은 공연예술 잡동사니만 나옴
+# (2026-08-25 확인). 대신 fetch_sports_events()가 대한체육회 스크래핑으로 진짜 체육대회를 채운다.
 CULTURE_DTYPES = {
     '전시': ['전시'], '연극': ['연극'], '뮤지컬': ['뮤지컬'],
     '음악': ['음악', '콘서트'], '국악': ['국악'], '무용': ['무용'], '오페라': ['오페라'],
-    '아동가족': ['기타'], '교육체험': ['기타'], '체육': ['기타'],
+    '아동가족': ['기타'], '교육체험': ['기타'],
     '공연': ['연극', '뮤지컬', '음악', '콘서트', '무용', '오페라', '국악'],  # 공연 = 여러 dtype 합산
 }
+
+# 대한체육회 스포츠지원포털 월간 대회일정 (공식 API 없음 — g1.sports.or.kr/schedule/month.do 스크래핑,
+# 2026-08-25 검증: 로그인/JS렌더링 없이 POST 한 번으로 HTML에 데이터가 그대로 옴, robots.txt 차단규칙 없음.
+# 비공식 방식이라 대한체육회가 페이지 구조를 바꾸면 조용히 깨질 수 있어 정기 점검 필요.
+# 캘린더 특성상 먼 미래 달은 대회가 아직 등록 안 돼 비어있는 게 정상(가까운 몇 달에 물량이 몰림).
+SPORTS_SCHEDULE_URL = 'https://g1.sports.or.kr/schedule/month.do'
+SPORTS_JSON_PATH = Path(__file__).parent.parent / 'data' / 'sports_events.json'
+SPORTS_MONTHS_AHEAD = 6
 
 
 def fetch_xml(endpoint, params):
@@ -356,6 +367,66 @@ def fetch_marathon_data():
     print(f"  ✅ 저장: {MARATHON_JSON_PATH} ({len(items)}건)")
 
 
+def fetch_sports_events():
+    """대한체육회 스포츠지원포털 월간 일정을 스크래핑해서 sports_events.json으로 저장 (모듈 상단 주석 참고)."""
+    print("\n📥 체육대회 일정 수집 중... (대한체육회 스포츠지원포털)")
+    today = datetime.now()
+    items = []
+    seen = set()
+    year, month = today.year, today.month
+    for i in range(SPORTS_MONTHS_AHEAD):
+        y, m = year, month
+        for _ in range(i):
+            m += 1
+            if m > 12:
+                m = 1
+                y += 1
+        params = f"searchYear={y}&searchMonth={m:02d}&searchGubun=0"
+        req = urllib.request.Request(
+            SPORTS_SCHEDULE_URL,
+            data=params.encode('utf-8'),
+            headers={'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/x-www-form-urlencoded'}
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                html = resp.read().decode('utf-8')
+        except Exception as e:
+            print(f"  ⚠️  {y}-{m:02d} 수집 실패: {e}")
+            continue
+
+        blocks = re.findall(
+            r'<dt>(.*?)</dt>\s*<dd class="date">\s*([\d/]+)\s*~\s*([\d/]+)\s*</dd>\s*<dd>(.*?)</dd>',
+            html, re.S
+        )
+        month_count = 0
+        for title, start, end, place in blocks:
+            title = re.sub(r'\s+', ' ', title).strip()
+            start_s = start.strip().replace('/', '')
+            end_s = end.strip().replace('/', '')
+            place = re.sub(r'\s+', ' ', place).strip()
+            key = (title, start_s)
+            if key in seen:
+                continue
+            seen.add(key)
+            items.append({
+                'title': title, 'place': place, 'startDate': start_s, 'endDate': end_s,
+                'realm': '체육', 'fee': '', 'seq': '', 'area': '',
+            })
+            month_count += 1
+        print(f"  → {y}-{m:02d}: {month_count}건")
+        time.sleep(0.3)
+
+    if not items:
+        print("  ⚠️  0건 수집됨 — 기존 sports_events.json을 그대로 둠")
+        return
+
+    SPORTS_JSON_PATH.write_text(
+        json.dumps({'updated': datetime.now().isoformat(), 'total': len(items), 'items': items}, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
+    print(f"  ✅ 저장: {SPORTS_JSON_PATH} ({len(items)}건)")
+
+
 if __name__ == '__main__':
     print("🎪 wooafest 데이터 수집 시작")
     print(f"   시각: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -371,6 +442,7 @@ if __name__ == '__main__':
     fetch_by_realm()
     fetch_festival_standard_dataset()
     fetch_marathon_data()
+    fetch_sports_events()
 
     # this_week/this_month은 위 by_realm/*.json을 날짜로 필터링해서 만들므로 반드시 이후에 실행
     fetch_period('W', DATA_DIR / 'this_week.json', '이번주 행사')
