@@ -117,7 +117,13 @@ def save_json(path, data):
 
 
 def fetch_period(period_code, out_file, label):
-    print(f"\n📥 {label} 수집 중...")
+    """this_week.json/this_month.json을 만든다. calendar.js/event.html이 여기서 읽는다.
+    예전엔 period2(구API)를 썼는데 stDate/edDate를 사실상 무시하고 pageNo와 무관하게
+    항상 같은 고정 표본만 주는 문제가 있어(2026-08-25 확인, 매달 옮겨다녀도 캘린더에 같은
+    행사만 보이는 버그였음), 이미 정상 작동하는 문화예술API 기반 by_realm/*.json을 모아
+    날짜로 직접 필터링하는 방식으로 대체. 축제는 festival.json에서 calendar.js가 따로
+    병합하므로 여기서는 제외해 중복 표시를 막는다."""
+    print(f"\n📥 {label} 수집 중... (문화예술API 데이터에서 날짜로 필터링)")
     today = datetime.now()
     if period_code == 'W':
         # 이번주 (월~일)
@@ -128,28 +134,28 @@ def fetch_period(period_code, out_file, label):
         start = today.replace(day=1)
         next_m = (today.replace(day=28) + timedelta(days=4)).replace(day=1)
         end = next_m - timedelta(days=1)
+    start_s, end_s = start.strftime('%Y%m%d'), end.strftime('%Y%m%d')
 
-    params = {
-        'stDate': start.strftime('%Y%m%d'),
-        'edDate': end.strftime('%Y%m%d'),
-    }
-    xml = fetch_xml('period2', params)
-    items = [normalize_item(i) for i in parse_items(xml)]
-
-    existing = []
-    if out_file.exists():
+    items = []
+    for realm_file in sorted((DATA_DIR / 'by_realm').glob('*.json')):
+        if realm_file.stem == '축제':
+            continue
         try:
-            existing = json.loads(out_file.read_text('utf-8')).get('items', [])
+            data = json.loads(realm_file.read_text('utf-8'))
         except Exception:
-            pass
+            continue
+        for it in data.get('items', []):
+            ev_start = it.get('startDate') or ''
+            ev_end = it.get('endDate') or ev_start
+            if ev_start and ev_end and ev_start <= end_s and ev_end >= start_s:
+                items.append(it)
 
     save_json(out_file, {
         'updated': datetime.now().isoformat(),
         'period': f"{start.strftime('%Y-%m-%d')}~{end.strftime('%Y-%m-%d')}",
         'total': len(items),
-        'items': items if items else existing
+        'items': items
     })
-    time.sleep(0.5)
 
 
 def fetch_by_region():
@@ -333,10 +339,12 @@ if __name__ == '__main__':
     (DATA_DIR / 'by_region').mkdir(exist_ok=True)
     (DATA_DIR / 'by_realm').mkdir(exist_ok=True)
 
-    fetch_period('W', DATA_DIR / 'this_week.json', '이번주 행사')
-    fetch_period('M', DATA_DIR / 'this_month.json', '이번달 행사')
     fetch_by_region()
     fetch_by_realm()
     fetch_festival_standard_dataset()
+
+    # this_week/this_month은 위 by_realm/*.json을 날짜로 필터링해서 만들므로 반드시 이후에 실행
+    fetch_period('W', DATA_DIR / 'this_week.json', '이번주 행사')
+    fetch_period('M', DATA_DIR / 'this_month.json', '이번달 행사')
 
     print("\n✅ 데이터 수집 완료!")
