@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T21:49:51.795943",
+  "updated": "2026-09-01T19:47:41.009224",
   "region": "대전",
   "total": 10,
   "items": [
@@ -109,6 +109,21 @@
       "url": ""
     },
     {
+      "seq": "396296",
+      "title": "하남역사박물관 이성산성 실감관 &lt;이성산성, 한강을 지배하다&gt;",
+      "place": "하남역사박물관",
+      "startDate": "20210325",
+      "endDate": "20261231",
+      "fee": "",
+      "realm": "전시",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202609/5140e219993140be811b2547d12abb06.jpg",
+      "phone": "",
+      "url": ""
+    },
+    {
       "seq": "204025",
       "title": "늘근도둑이야기",
       "place": "아트포레스트 1관",
@@ -135,21 +150,6 @@
       "lat": "",
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/24/07/show_202407816251114687.png",
-      "phone": "",
-      "url": ""
-    },
-    {
-      "seq": "219781",
-      "title": "이우환 공간 상설전시",
-      "place": "이우환 공간",
-      "startDate": "20230101",
-      "endDate": "20301231",
-      "fee": "",
-      "realm": "전시",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/22/08/show_2022082315161227864.png",
       "phone": "",
       "url": ""
     }
