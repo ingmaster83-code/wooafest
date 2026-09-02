@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-01T19:51:27.609565",
-  "total": 27,
+  "updated": "2026-09-02T19:50:30.594671",
+  "total": 50,
   "items": [
     {
       "title": "제1회 단양 코리아오픈 패러글라이딩 국제대회",
@@ -267,6 +267,236 @@
       "place": "서울 상명고등학교 체육관",
       "startDate": "20260920",
       "endDate": "20260920",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "제12회 경상북도-포항시 생활체육 국제국학기공대회",
+      "place": "포항체육관",
+      "startDate": "20261009",
+      "endDate": "20261010",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[FIG] 제54회 기계체조 세계선수권대회",
+      "place": "네덜란드 로테르담",
+      "startDate": "20261017",
+      "endDate": "20261025",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2026 카타르 10볼 월드컵",
+      "place": "카타르 도하",
+      "startDate": "20261019",
+      "endDate": "20261029",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2026년 한국 패러글라이딩 리그 3차전 및 챔피언전(정밀착륙)",
+      "place": "경상북도 포항시 곤륜산 활공장",
+      "startDate": "20261024",
+      "endDate": "20261025",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "제35회 재팬컵 2025 3쿠션 토너먼트",
+      "place": "일본 도쿄",
+      "startDate": "20261024",
+      "endDate": "20261025",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[IWF] 세계역도선수권대회",
+      "place": "중국 닝보",
+      "startDate": "20261027",
+      "endDate": "20261108",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[YOG] 제4회 다카르 하계청소년올림픽대회",
+      "place": "세네갈 다카르",
+      "startDate": "20261031",
+      "endDate": "20261113",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "위더스제약 2026 괴산추석장사씨름대회",
+      "place": "충청북도 괴산군 &lt;괴산문화체육센터&gt;",
+      "startDate": "20261005",
+      "endDate": "20261011",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2026 스포츠클럽 디비전i리그 - 여자부 DIV 1",
+      "place": "수원아이스하우스",
+      "startDate": "20261007",
+      "endDate": "20261009",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "제107회 전국체육대회",
+      "place": "제주",
+      "startDate": "20261016",
+      "endDate": "20261022",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2027년 수영(아티스틱스위밍) 국가대표 선발대회",
+      "place": "김천실내수영장",
+      "startDate": "20261024",
+      "endDate": "20261025",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2027년 수영(아티스틱스위밍) 국가대표 후보선수 선발대회",
+      "place": "김천실내수영장",
+      "startDate": "20261024",
+      "endDate": "20261025",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2026 U-15 H3 디비전 리그",
+      "place": "아산",
+      "startDate": "20261031",
+      "endDate": "20261220",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[SportAccord] IF포럼",
+      "place": "스위스 로잔",
+      "startDate": "20261005",
+      "endDate": "20261007",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[ISSF] 세계사격선수권대회",
+      "place": "카타르 도하",
+      "startDate": "20261101",
+      "endDate": "20261115",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "제2회 대한체육회장배 생활체육 전국골프대회",
+      "place": "코스카",
+      "startDate": "20261102",
+      "endDate": "20261103",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2026 제주 아시아 드림컵 꿈나무 핸드볼대회",
+      "place": "제주특별자치도",
+      "startDate": "20261123",
+      "endDate": "20261128",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[WORLD AQUATICS] 세계수영선수권대회(25M)",
+      "place": "중국 베이징",
+      "startDate": "20261201",
+      "endDate": "20261206",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[OCA] 제6회 리야드 아시아실내무도경기대회",
+      "place": "사우디아라비아 리야드",
+      "startDate": "20261212",
+      "endDate": "20261220",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "2026 KSIA President&#039;s Cup FIS Alpine Ski Championship",
+      "place": "Alpensia resort",
+      "startDate": "20261228",
+      "endDate": "20261229",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[ANOC] ANOC집행위원회",
+      "place": "홍콩",
+      "startDate": "20261207",
+      "endDate": "20261207",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[ANOC] 제28차 ANOC 총회",
+      "place": "홍콩",
+      "startDate": "20261208",
+      "endDate": "20261209",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
+      "title": "[FISU] 제33회 장춘 동계세계대학경기대회",
+      "place": "중국 장춘",
+      "startDate": "20270115",
+      "endDate": "20270125",
       "realm": "체육",
       "fee": "",
       "seq": "",
