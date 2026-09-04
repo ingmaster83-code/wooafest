@@ -1,8 +1,24 @@
 {
-  "updated": "2026-09-03T19:51:27.957032",
+  "updated": "2026-09-04T19:22:44.565529",
   "realm": "아동가족",
-  "total": 25,
+  "total": 26,
   "items": [
+    {
+      "seq": "",
+      "title": "2026 성남아트센터 오후의 콘서트: 탱고, 한낮의 열정 (9월)",
+      "place": "성남아트센터 앙상블씨어터",
+      "startDate": "20260902",
+      "endDate": "20260902",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/08/rdf_202608062123739524.gif",
+      "phone": "031-783-8000",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=74614",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "[도고아트홀] 2026년 9월 기획 공연 안내",
@@ -85,6 +101,22 @@
     },
     {
       "seq": "",
+      "title": "2026 광주시문화재단 하반기 프로그램 안내",
+      "place": "광주시문화예술의전당",
+      "startDate": "20260701",
+      "endDate": "20261231",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122356421.jpg",
+      "phone": "1522-0338",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71801",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
       "title": "2026 광장 속 버스킹",
       "place": "김포문화재단",
       "startDate": "20260408",
@@ -113,22 +145,6 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061921175487678.gif",
       "phone": "02-2009-9700",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71816",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
-      "title": "2026 광주시문화재단 하반기 프로그램 안내",
-      "place": "광주시문화예술의전당",
-      "startDate": "20260701",
-      "endDate": "20261231",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122356421.jpg",
-      "phone": "1522-0338",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71801",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
