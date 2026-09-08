@@ -1,8 +1,24 @@
 {
-  "updated": "2026-08-24T17:46:08.685015",
+  "updated": "2026-09-07T20:25:20.689286",
   "realm": "오페라",
-  "total": 9,
+  "total": 10,
   "items": [
+    {
+      "seq": "",
+      "title": "몰리에르와 샤르팡티에의 코믹발레오페라 <상상병 환자 2026>",
+      "place": "구로아트밸리 예술극장",
+      "startDate": "20260902",
+      "endDate": "20260902",
+      "fee": "",
+      "realm": "오페라",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/08/rdf_2026080621202258226.gif",
+      "phone": "구로문화재단 02-2029-1724",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=74566",
+      "content": "구로아트밸리 예술극장 재개관 시리즈"
+    },
     {
       "seq": "",
       "title": "2026 춘천오페라페스티벌 요한 슈트라우스 2세의 오페레타: 박쥐",
