@@ -18,6 +18,7 @@ BASE_URL = 'https://apis.data.go.kr/B553457/cultureinfo'
 CULTURE_BASE_URL = 'https://api.kcisa.kr/openapi/CNV_060/request'
 DATA_DIR = Path(__file__).parent.parent / 'data' / 'culture'
 FESTIVAL_JSON_PATH = Path(__file__).parent.parent / 'data' / 'festival.json'
+FESTIVAL_CORRECTIONS_PATH = Path(__file__).parent.parent / 'data' / 'festival_corrections.json'
 
 # 전국문화축제표준데이터 (data.go.kr publicDataPk=15013104, 문화체육관광부/한국관광공사, 분기별 갱신)
 # www.data.go.kr가 제공하는 공개 다운로드 엔드포인트라 serviceKey 없이도 받을 수 있고,
@@ -290,6 +291,32 @@ def fetch_by_realm():
         time.sleep(0.3)
 
 
+def apply_festival_corrections(records):
+    """공공데이터 원본이 틀렸다고 주최기관 등에서 정정 요청한 항목을 덮어쓴다.
+    data/festival_corrections.json에 {match:{필드:값,...}, fix:{필드:값,...}} 형태로 등록.
+    원본(data.go.kr publicDataPk=15013104)이 스스로 고쳐질 때까지 매 수집마다 재적용됨."""
+    if not FESTIVAL_CORRECTIONS_PATH.exists():
+        return records
+    try:
+        corrections = json.loads(FESTIVAL_CORRECTIONS_PATH.read_text('utf-8'))
+    except Exception as e:
+        print(f"  ⚠️  festival_corrections.json 로드 실패: {e}")
+        return records
+
+    applied = 0
+    for c in corrections:
+        match, fix = c.get('match', {}), c.get('fix', {})
+        if not match or not fix:
+            continue
+        for r in records:
+            if all(r.get(k) == v for k, v in match.items()):
+                r.update(fix)
+                applied += 1
+    if applied:
+        print(f"  🔧 수동 보정 {applied}건 적용 (festival_corrections.json)")
+    return records
+
+
 def fetch_festival_standard_dataset():
     """전국문화축제표준데이터를 받아 festival.json으로 저장 (모듈 상단 주석 참고)."""
     print("\n📥 전국문화축제표준데이터 수집 중...")
@@ -335,6 +362,8 @@ def fetch_festival_standard_dataset():
     if not all_records:
         print("  ⚠️  0건 수집됨 — 기존 festival.json을 그대로 둠")
         return
+
+    all_records = apply_festival_corrections(all_records)
 
     fields = [{'id': kor} for kor in FESTIVAL_FIELD_MAP.values()]
     FESTIVAL_JSON_PATH.write_text(
