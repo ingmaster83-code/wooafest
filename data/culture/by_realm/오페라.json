@@ -1,8 +1,24 @@
 {
-  "updated": "2026-09-08T19:48:15.647540",
+  "updated": "2026-09-09T19:48:16.160124",
   "realm": "오페라",
-  "total": 10,
+  "total": 11,
   "items": [
+    {
+      "seq": "",
+      "title": "[천안] 2026 천안예술의전당 개관14주년 기념공연II 국립오페라단 오페라: 피가로의 결혼",
+      "place": "천안예술의전당 대공연장",
+      "startDate": "20260919",
+      "endDate": "20260920",
+      "fee": "",
+      "realm": "오페라",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/08/rdf_2026082521212418139.gif",
+      "phone": "천안예술의전당 1566-0155",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=74827",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "몰리에르와 샤르팡티에의 코믹발레오페라 <상상병 환자 2026>",
