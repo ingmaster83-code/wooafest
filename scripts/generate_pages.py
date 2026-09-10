@@ -28,6 +28,17 @@ REALM_EMOJI = {
     '국악': '🥁', '무용': '💃', '뮤지컬': '🎤', '오페라': '🎼', '마라톤': '🏃'
 }
 
+# 쿠팡 파트너스 (고객 관심 기반 추천) — 콘텐츠·애드센스 아래, 페이지 최하단.
+COUPANG_HTML = '''
+<div class="coupang-partners" style="margin:36px auto 0;max-width:720px;padding:0 16px 8px;text-align:center;overflow-x:auto;">
+  <script src="https://ads-partners.coupang.com/g.js"></script>
+  <script>
+    new PartnersCoupang.G({"id":980427,"trackingCode":"AF5600192","subId":"fest","template":"carousel","width":"680","height":"140"});
+  </script>
+</div>
+'''
+COUPANG_DISCLOSURE = '<p style="margin:6px 0 0;font-size:.7rem;opacity:.55;">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>'
+
 REALM_SEO = {
     '축제': ('전국 축제 2026', '전국 축제 일정을 확인하세요.'),
     '공연': ('전국 공연 행사 2026', '전국 공연, 음악회, 콘서트 일정을 확인하세요.'),
@@ -192,7 +203,7 @@ def footer_html():
   <div class="footer-col"><h4>분야별</h4><a href="/분야/축제.html">축제</a><a href="/분야/공연.html">공연</a><a href="/분야/전시.html">전시</a><a href="/분야/마라톤.html">마라톤</a></div>
   <div class="footer-col"><h4>지역별</h4><a href="/지역/서울.html">서울</a><a href="/지역/경기.html">경기</a><a href="/지역/부산.html">부산</a><a href="/지역/제주.html">제주</a></div>
   <div class="footer-col"><h4>정보</h4><a href="/about.html">서비스 소개</a><a href="/privacy.html">개인정보처리방침</a></div>
-</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div></div></footer>'''
+</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div>''' + COUPANG_DISCLOSURE + '''</div></footer>'''
 
 
 def generate_region_page(region):
@@ -353,6 +364,7 @@ def generate_region_page(region):
   </div>
 </div>
 
+{COUPANG_HTML}
 {footer_html()}
 <script>(adsbygoogle=window.adsbygoogle||[]).push({{}});(adsbygoogle=window.adsbygoogle||[]).push({{}});</script>
 <script>
@@ -487,6 +499,7 @@ def generate_realm_page(realm):
   </aside>
 </div>
 
+{COUPANG_HTML}
 {footer_html()}
 <script>(adsbygoogle=window.adsbygoogle||[]).push({{}});(adsbygoogle=window.adsbygoogle||[]).push({{}});(adsbygoogle=window.adsbygoogle||[]).push({{}});</script>
 <script>
@@ -740,12 +753,13 @@ def generate_festival_pages():
   </aside>
 </div>
 
+{COUPANG_HTML}
 <footer class="footer"><div class="footer-inner"><div class="footer-grid">
   <div class="footer-col"><h4>🎪 우아축제</h4><p>전국 축제·공연·행사 정보 허브</p><a href="https://wooahouse.com" target="_blank" style="margin-top:10px;display:inline-block;color:#10B981">wooahouse.com →</a></div>
   <div class="footer-col"><h4>분야별</h4><a href="../분야/축제.html">축제</a><a href="../분야/공연.html">공연</a><a href="../분야/전시.html">전시</a><a href="../분야/아동가족.html">아동가족</a></div>
   <div class="footer-col"><h4>지역별</h4><a href="../지역/서울.html">서울</a><a href="../지역/경기.html">경기</a><a href="../지역/부산.html">부산</a><a href="../지역/제주.html">제주</a></div>
   <div class="footer-col"><h4>정보</h4><a href="../about.html">서비스 소개</a><a href="../privacy.html">개인정보처리방침</a></div>
-</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div></div></footer>
+</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div>{COUPANG_DISCLOSURE}</div></footer>
 
 <script>
 {'function openParking(){window.open("https://wooaparking.wooahouse.com/?lat='+str(lat)+'&lng='+str(lng)+'","_blank")}' if lat and lng else ('function openParking(){window.open("https://wooaparking.wooahouse.com/?q='+esc(address).replace('"','')+'","_blank")}' if address else '')}
@@ -917,12 +931,13 @@ def generate_marathon_pages():
   </aside>
 </div>
 
+{COUPANG_HTML}
 <footer class="footer"><div class="footer-inner"><div class="footer-grid">
   <div class="footer-col"><h4>🎪 우아축제</h4><p>전국 축제·공연·행사 정보 허브</p><a href="https://wooahouse.com" target="_blank" style="margin-top:10px;display:inline-block;color:#10B981">wooahouse.com →</a></div>
   <div class="footer-col"><h4>분야별</h4><a href="../분야/축제.html">축제</a><a href="../분야/공연.html">공연</a><a href="../분야/전시.html">전시</a><a href="../분야/마라톤.html">마라톤</a></div>
   <div class="footer-col"><h4>지역별</h4><a href="../지역/서울.html">서울</a><a href="../지역/경기.html">경기</a><a href="../지역/부산.html">부산</a><a href="../지역/제주.html">제주</a></div>
   <div class="footer-col"><h4>정보</h4><a href="../about.html">서비스 소개</a><a href="../privacy.html">개인정보처리방침</a></div>
-</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div></div></footer>
+</div><div class="footer-bottom">&copy; 2026 WooaHouse. All rights reserved.</div>{COUPANG_DISCLOSURE}</div></footer>
 
 <script>
 {'function openParking(){window.open("https://wooaparking.wooahouse.com/?lat='+str(lat)+'&lng='+str(lng)+'","_blank")}' if lat and lng else ('function openParking(){window.open("https://wooaparking.wooahouse.com/?q='+esc(address).replace('"','')+'","_blank")}' if address else '')}
