@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T19:48:09.518954",
+  "updated": "2026-09-10T19:30:05.136984",
   "realm": "국악",
   "total": 55,
   "items": [
@@ -133,22 +133,6 @@
     },
     {
       "seq": "",
-      "title": "2026 선릉아트홀 제8회 전통성악 기획공연 [좌창, 깊은사랑]",
-      "place": "선릉아트홀",
-      "startDate": "20260820",
-      "endDate": "20260920",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/22b4c2a8f33040dfb262cbc976ebda2a.jpg",
-      "phone": "02-553-0067, 카카오톡 채널 &&#35;39;선릉아트홀&&#35;39;",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73147",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "수림뉴웨이브 2026 - 추다혜 〈엇숨〉",
       "place": "김희수아트센터 SPACE 1",
       "startDate": "20260910",
@@ -165,18 +149,18 @@
     },
     {
       "seq": "",
-      "title": "수림뉴웨이브 2026 - 정은혜 〈Eot - Pulse〉",
-      "place": "김희수아트센터 SPACE 1",
-      "startDate": "20260917",
-      "endDate": "20260917",
+      "title": "2026 선릉아트홀 제8회 전통성악 기획공연 [좌창, 깊은사랑]",
+      "place": "선릉아트홀",
+      "startDate": "20260820",
+      "endDate": "20260920",
       "fee": "",
       "realm": "국악",
       "area": "",
       "lat": "",
       "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202608/c9072d35378e49a48b178797eb115e95.jpg",
-      "phone": "수림문화재단 070-4912-8442",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73205",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/22b4c2a8f33040dfb262cbc976ebda2a.jpg",
+      "phone": "02-553-0067, 카카오톡 채널 &&#35;39;선릉아트홀&&#35;39;",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73147",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -209,6 +193,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202607/25742e69c35a429e9e6ff2efe7047582.jpg",
       "phone": "서울남산국악당 02-6358-5500",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73177",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "수림뉴웨이브 2026 - 정은혜 〈Eot - Pulse〉",
+      "place": "김희수아트센터 SPACE 1",
+      "startDate": "20260917",
+      "endDate": "20260917",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202608/c9072d35378e49a48b178797eb115e95.jpg",
+      "phone": "수림문화재단 070-4912-8442",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=73205",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -629,22 +629,6 @@
     },
     {
       "seq": "",
-      "title": "2026 국립극장 <완창판소리> 6월",
-      "place": "국립극장 달오름극장",
-      "startDate": "20260606",
-      "endDate": "20260606",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202604/89526c9fdf014100992e3bcbbd5f2bc3.png",
-      "phone": "02-2280-4114",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=68131",
-      "content": "판소리의 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;. 박성희 명창이 '수궁가' 미산제로 과거와 현재, 그리고 미래를 잇는 완창의 숨결을 선보인다."
-    },
-    {
-      "seq": "",
       "title": "2026 국립극장 <완창판소리> 5월",
       "place": "국립극장 달오름극장",
       "startDate": "20260509",
@@ -658,6 +642,22 @@
       "phone": "02-2280-4114",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=68114",
       "content": "판소리의 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;. 김미진 명창이 '춘향가' 김세종제로 단정한 미감과 서정성을 온전히 전하며 판소리 한 바탕의 깊이를 선보인다.\n\n김미진이 이번 무대에서 부를 김세종제 '춘향가'는 조선 8대 명창 김세종으로부터 이어진 동편제 계열의 소릿제로, 고창의 신재효를 중심으로 한 전승 과정에서 사설과 음악이 정리되며 현재의 모습을 갖추었다. 우아한 기품과 안정된 음악적 흐름이 특징이며, 판소리 다섯 바탕 가운데서도 서사와 음악의 완성도가 높은 작품으로 평가된다. 춘향과 이몽룡의 사랑과 시련, 그리고 인간의 절개를 중심으로 전개되는 이 작품에서 김미진은 차분하면서도 응축된 성음과 섬세한 감정 표현으로 인물의 내면을 깊이 있게 풀어낼 예정이다. 이번 완창 무대에 서는 김세종제 춘향가가 지닌 단정한 미감과 서정성을 온전히 전하며 판소리 한 바탕의 깊이를 선보인다.\n\n\n고수 | 김청만, 임현빈, 김태영"
+    },
+    {
+      "seq": "",
+      "title": "2026 국립극장 <완창판소리> 6월",
+      "place": "국립극장 달오름극장",
+      "startDate": "20260606",
+      "endDate": "20260606",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202604/89526c9fdf014100992e3bcbbd5f2bc3.png",
+      "phone": "02-2280-4114",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=68131",
+      "content": "판소리의 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;. 박성희 명창이 '수궁가' 미산제로 과거와 현재, 그리고 미래를 잇는 완창의 숨결을 선보인다."
     },
     {
       "seq": "",
@@ -709,22 +709,6 @@
     },
     {
       "seq": "",
-      "title": "2026 다담 3,4월",
-      "place": "국립국악원 우면당",
-      "startDate": "20260325",
-      "endDate": "20260429",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/7da87dbf92154ebcb1258ce68736518f.jpg",
-      "phone": "02-580-3300",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65581",
-      "content": "2월부터 11월까지 매월 마지막 주 수요일 오전 11시에는 국악과 차, 그리고 이야기가 함께하는 &lt;다담&gt;이 열립니다.다담지기 황수경 아나운서의 진행으로 예술같은 삶을 살고 있는사회 각 분야의 저명 인사를 초청해 이야기와 우리 음악을 나누는토크 콘서트 입니다.진솔한 삶의 이야기에 더해지는 우리 음악 한 잔!오전의 설레이는 햇살 같은 특별한 시간을 느껴보세요."
-    },
-    {
-      "seq": "",
       "title": "2026 토요국악동화 4월",
       "place": "국립국악원 풍류사랑방",
       "startDate": "20260404",
@@ -738,6 +722,22 @@
       "phone": "02-580-3300",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65588",
       "content": "아이들의 눈높이로 흥미진진한 이야기와 음악을 들려주는 국악동화 공연이 매주 토요일 오후 어린이와 가족 관객을 맞이합니다.울림 그대로의 소리를 전달하는 한옥 사랑방 형태의 자연음향공연장에서 국악 감수성을 키워주는 어린이극에 온 가족이함께해보세요. 12개월 이상이면 누구나 관람 가능합니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 다담 3,4월",
+      "place": "국립국악원 우면당",
+      "startDate": "20260325",
+      "endDate": "20260429",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/7da87dbf92154ebcb1258ce68736518f.jpg",
+      "phone": "02-580-3300",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65581",
+      "content": "2월부터 11월까지 매월 마지막 주 수요일 오전 11시에는 국악과 차, 그리고 이야기가 함께하는 &lt;다담&gt;이 열립니다.다담지기 황수경 아나운서의 진행으로 예술같은 삶을 살고 있는사회 각 분야의 저명 인사를 초청해 이야기와 우리 음악을 나누는토크 콘서트 입니다.진솔한 삶의 이야기에 더해지는 우리 음악 한 잔!오전의 설레이는 햇살 같은 특별한 시간을 느껴보세요."
     },
     {
       "seq": "",
@@ -757,22 +757,6 @@
     },
     {
       "seq": "",
-      "title": "2026 국립극장 <완창판소리> 3월",
-      "place": "국립극장 달오름극장",
-      "startDate": "20260307",
-      "endDate": "20260307",
-      "fee": "",
-      "realm": "국악",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/80e6326cd8994612b58ae57d360a70ef.jpg",
-      "phone": "02-2280-4114",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65521",
-      "content": "박애리 명창의 &lt;심청가&gt; 강산제.판소리 다섯 바탕, 그 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;"
-    },
-    {
-      "seq": "",
       "title": "2026 국립극장 <완창판소리> 4월",
       "place": "국립극장 달오름극장",
       "startDate": "20260411",
@@ -786,6 +770,22 @@
       "phone": "02-2280-4114",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65529",
       "content": "왕기석 명창의 &lt;수궁가&gt; 미산제.판소리 다섯 바탕, 그 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;"
+    },
+    {
+      "seq": "",
+      "title": "2026 국립극장 <완창판소리> 3월",
+      "place": "국립극장 달오름극장",
+      "startDate": "20260307",
+      "endDate": "20260307",
+      "fee": "",
+      "realm": "국악",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202602/80e6326cd8994612b58ae57d360a70ef.jpg",
+      "phone": "02-2280-4114",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=65521",
+      "content": "박애리 명창의 &lt;심청가&gt; 강산제.판소리 다섯 바탕, 그 긴 여정을 처음부터 끝까지 함께하는 국립극장 &lt;완창판소리&gt;"
     },
     {
       "seq": "",
