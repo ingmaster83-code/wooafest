@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-11T19:40:28.206485",
+  "updated": "2026-09-12T19:08:41.273298",
   "period": "2026-09-01~2026-09-30",
-  "total": 228,
+  "total": 230,
   "items": [
     {
       "seq": "",
@@ -306,6 +306,38 @@
       "phone": "031-633-9758",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71417",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "[2026 PLOT STAGE] Atchi - 낭독쇼케이스 <STEAK-DIVE!>",
+      "place": "극장 PLOT",
+      "startDate": "20260919",
+      "endDate": "20260920",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202608/8ea3d0a247a244a18cb57cc537183fac.png",
+      "phone": "atchidive@gmail.com / 인스타그램 @atchi_steakdive",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=74291",
+      "content": "뮤지컬 &lt;STEAK-DIVE!&gt;는 누구나 한 번쯤 들어본 &lsquo;3초 룰&rsquo;에서 출발한 창작 뮤지컬이다. 바닥에 떨어진 음식을 향해 록 콘서트의 스테이지 다이브처럼 뛰어드는 세균들의 상상력에서 탄생한 이 작품은, 가장 작은 존재들의 가장 뜨거운 무대를 그린다. 꿈을 향해 나아가고 싶지만 두려움과 현실 앞에서 망설이는 세균 &lsquo;헬리코&rsquo;의 여정을 통해, 자신만의 리듬을 찾는 순간 누구나 세상을 향해 도약할 수 있다는 메시지를 전한다. 강렬한 록 사운드와 개성 넘치는 캐릭터, 유쾌한 상상력이 어우러진 무대는 웃음과 에너지를 선사하는 동시에 현대를 살아가는 우리들의 모습을 은유적으로 비춘다. 본 작품은 120분 내외의 중극장 창작뮤지컬 개발을 목표로 하며, 개발 과정에서 약 60분 분량의 리딩 쇼케이스를 통해 작품의 가능성과 완성도를 선보이고자 한다."
+    },
+    {
+      "seq": "",
+      "title": "2026 창작ing 전통 <수난이대>",
+      "place": "국립정동극장 세실",
+      "startDate": "20260827",
+      "endDate": "20260901",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202606/2364292a3a824933929de0c6899ed369.jpg",
+      "phone": "02-751-1500",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=70327",
+      "content": "일제 강제징용으로 팔을 잃은 아버지 '만도'와 한국전쟁에서 다리를 잃은 아들 '진수'가 재회해 집으로 돌아가는 여정을 그린다"
     },
     {
       "seq": "",
