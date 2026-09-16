@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-15T20:06:39.202257",
-  "total": 77,
+  "updated": "2026-09-16T20:09:26.960838",
+  "total": 62,
   "items": [
     {
       "title": "2026 중국마스터즈배드민턴선수권대회",
@@ -543,6 +543,16 @@
       "area": ""
     },
     {
+      "title": "2027년 수영(아티스틱스위밍) 국가대표 선발대회",
+      "place": "김천실내수영장",
+      "startDate": "20261024",
+      "endDate": "20261025",
+      "realm": "체육",
+      "fee": "",
+      "seq": "",
+      "area": ""
+    },
+    {
       "title": "2027 장춘동계유니버시아드대회 파견선수 선발대회",
       "place": "태릉국제스케이트장",
       "startDate": "20261024",
@@ -563,20 +573,10 @@
       "area": ""
     },
     {
-      "title": "2027년 수영(아티스틱스위밍) 국가대표 선발대회",
-      "place": "김천실내수영장",
-      "startDate": "20261024",
-      "endDate": "20261025",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
       "title": "제30회 전국학생우슈선수권대회 겸 생활체육우슈대회",
       "place": "보은국민체육센터",
       "startDate": "20261030",
-      "endDate": "20261031",
+      "endDate": "20261101",
       "realm": "체육",
       "fee": "",
       "seq": "",
@@ -617,156 +617,6 @@
       "place": "스위스 로잔",
       "startDate": "20261005",
       "endDate": "20261007",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "[ISSF] 세계사격선수권대회",
-      "place": "카타르 도하",
-      "startDate": "20261101",
-      "endDate": "20261115",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "제12회 울산광역시장배 전국 댄스스포츠대회",
-      "place": "대현체육관",
-      "startDate": "20261101",
-      "endDate": "20261101",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "제2회 대한체육회장배 생활체육 전국골프대회",
-      "place": "코스카",
-      "startDate": "20261102",
-      "endDate": "20261103",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "2026 전국종합선수권대회 겸 2027년도 세계선수권(주니어/시니어) 파견대표 1차 선발전",
-      "place": "강원, 양구문화체육회관",
-      "startDate": "20261105",
-      "endDate": "20261107",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "2026 전국종합선수권대회 겸 2027년도 국가대표(개인&amp;그룹) 및 미래국가대표(후보&amp;청소년) 선발전",
-      "place": "강원, 양구청춘체육관",
-      "startDate": "20261108",
-      "endDate": "20261109",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "2027년 수영(다이빙) 국가대표 선발대회",
-      "place": "김천실내수영장",
-      "startDate": "20261112",
-      "endDate": "20261114",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "제19회 회장배 전국 스쿼시",
-      "place": "청주",
-      "startDate": "20261114",
-      "endDate": "20261115",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "2026 제주 아시아 드림컵 꿈나무 핸드볼대회",
-      "place": "제주특별자치도",
-      "startDate": "20261123",
-      "endDate": "20261128",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "제5회 회장배 전국 대학스쿼시 동아리대회",
-      "place": "청주 국제스쿼시경기장",
-      "startDate": "20261128",
-      "endDate": "20261128",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "[WORLD AQUATICS] 세계수영선수권대회(25M)",
-      "place": "중국 베이징",
-      "startDate": "20261201",
-      "endDate": "20261206",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "[OCA] 제6회 리야드 아시아실내무도경기대회",
-      "place": "사우디아라비아 리야드",
-      "startDate": "20261212",
-      "endDate": "20261220",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "2026 KSIA President&#039;s Cup FIS Alpine Ski Championship",
-      "place": "Alpensia resort",
-      "startDate": "20261228",
-      "endDate": "20261229",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "[ANOC] ANOC집행위원회",
-      "place": "홍콩",
-      "startDate": "20261207",
-      "endDate": "20261207",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "[ANOC] 제28차 ANOC 총회",
-      "place": "홍콩",
-      "startDate": "20261208",
-      "endDate": "20261209",
-      "realm": "체육",
-      "fee": "",
-      "seq": "",
-      "area": ""
-    },
-    {
-      "title": "[FISU] 제33회 장춘 동계세계대학경기대회",
-      "place": "중국 장춘",
-      "startDate": "20270115",
-      "endDate": "20270125",
       "realm": "체육",
       "fee": "",
       "seq": "",
