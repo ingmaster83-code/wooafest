@@ -1,8 +1,40 @@
 {
-  "updated": "2026-09-16T20:06:46.621262",
+  "updated": "2026-09-17T20:06:55.254271",
   "realm": "교육체험",
-  "total": 0,
+  "total": 28,
   "items": [
+    {
+      "seq": "",
+      "title": "2026 방과후 공연놀이터(장르체험권)",
+      "place": "노원어린이극장(구.노원어울림극장)",
+      "startDate": "20260916",
+      "endDate": "20261209",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/08/rdf_202608242117659991.gif",
+      "phone": "02-2289-3400",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75207",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 강동예술인페스티벌, 강동무용협회: 봄, 여름, 가을, 겨울 그리고 사랑",
+      "place": "강동아트센터 대극장 한강",
+      "startDate": "20260919",
+      "endDate": "20260919",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_202609112117929758.jpg",
+      "phone": "02-470-1656",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75167",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "2026 성남아트센터 오후의 콘서트: 탱고, 한낮의 열정 (9월)",
@@ -117,22 +149,6 @@
     },
     {
       "seq": "",
-      "title": "[과천] 2026 재즈로 푸른 밤 <Jazz＆Dance> Vol.1 - Swing",
-      "place": "과천시민회관 소극장",
-      "startDate": "20260704",
-      "endDate": "20260704",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061921175487678.gif",
-      "phone": "02-2009-9700",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71816",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "2026 광주시문화재단 하반기 프로그램 안내",
       "place": "광주시문화예술의전당",
       "startDate": "20260701",
@@ -145,6 +161,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122356421.jpg",
       "phone": "1522-0338",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71801",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "[과천] 2026 재즈로 푸른 밤 <Jazz＆Dance> Vol.1 - Swing",
+      "place": "과천시민회관 소극장",
+      "startDate": "20260704",
+      "endDate": "20260704",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061921175487678.gif",
+      "phone": "02-2009-9700",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71816",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
