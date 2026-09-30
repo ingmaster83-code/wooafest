@@ -1,8 +1,24 @@
 {
-  "updated": "2026-09-09T19:47:39.590184",
+  "updated": "2026-09-29T21:19:20.215741",
   "realm": "뮤지컬",
-  "total": 16,
+  "total": 17,
   "items": [
+    {
+      "seq": "",
+      "title": "[부천] 2026 부천문화재단 어린이공연 - 페이퍼아트 뮤지컬 <종이아빠>",
+      "place": "복사골문화센터 판타지아극장",
+      "startDate": "20261001",
+      "endDate": "20261003",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026090221231713196.gif",
+      "phone": "032-320-6336",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75657",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "[안산] 2026 가족 라이브 뮤지컬 <라푼젤>",
@@ -197,22 +213,6 @@
     },
     {
       "seq": "",
-      "title": "2026 창작ing 뮤지컬 <던터치>",
-      "place": "국립정동극장 세실 (구.세실극장)",
-      "startDate": "20260619",
-      "endDate": "20260705",
-      "fee": "",
-      "realm": "뮤지컬",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/rlyPerfInfo/2026/202604/e3d278b33d9f45b092943452e81825cd.jpg",
-      "phone": "02-751-1500",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67893",
-      "content": "던 터치(Dawn Touch)'에 이르는 8시간의 여정을 다룬 작품"
-    },
-    {
-      "seq": "",
       "title": "2026 기획공연 뮤지컬 <피리 부는 사나이>",
       "place": "국립정동극장",
       "startDate": "20260612",
@@ -226,6 +226,22 @@
       "phone": "02-751-1500",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67892",
       "content": "포크 음악의 거장, 송창식의 명곡으로 되살아난 격동의 시대"
+    },
+    {
+      "seq": "",
+      "title": "2026 창작ing 뮤지컬 <던터치>",
+      "place": "국립정동극장 세실 (구.세실극장)",
+      "startDate": "20260619",
+      "endDate": "20260705",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/rlyPerfInfo/2026/202604/e3d278b33d9f45b092943452e81825cd.jpg",
+      "phone": "02-751-1500",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=67893",
+      "content": "던 터치(Dawn Touch)'에 이르는 8시간의 여정을 다룬 작품"
     },
     {
       "seq": "",
