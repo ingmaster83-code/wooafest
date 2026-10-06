@@ -1,8 +1,24 @@
 {
-  "updated": "2026-10-05T23:06:11.154198",
+  "updated": "2026-10-06T21:30:22.964726",
   "realm": "뮤지컬",
-  "total": 0,
+  "total": 18,
   "items": [
+    {
+      "seq": "",
+      "title": "2026 국립정동극장 예술단 <아리랑>",
+      "place": "국립정동극장",
+      "startDate": "20261202",
+      "endDate": "20261227",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/ucms/myRlyPerfInfo/2026/202610/017e87c9d7524f05a211cb4ea3ab52d1.png",
+      "phone": "02-751-1500",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76013",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "[부천] 2026 부천문화재단 어린이공연 - 페이퍼아트 뮤지컬 <종이아빠>",
@@ -101,22 +117,6 @@
     },
     {
       "seq": "",
-      "title": "2026 꿈꾸는극장, 동물원에 간 고양이",
-      "place": "꿈나무극장",
-      "startDate": "20260711",
-      "endDate": "20260711",
-      "fee": "",
-      "realm": "뮤지컬",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061221171147707.gif",
-      "phone": "02-830-2562",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71990",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "[대전] 2026 베스트셀러 뮤지컬 <커다란 방귀>",
       "place": "대전평송청소년문화센터",
       "startDate": "20260711",
@@ -129,6 +129,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_202606112124126458.gif",
       "phone": "070-7807-0701",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71983",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 꿈꾸는극장, 동물원에 간 고양이",
+      "place": "꿈나무극장",
+      "startDate": "20260711",
+      "endDate": "20260711",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061221171147707.gif",
+      "phone": "02-830-2562",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71990",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
