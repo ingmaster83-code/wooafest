@@ -1,23 +1,8 @@
 {
-  "updated": "2026-10-09T21:30:44.133986",
+  "updated": "2026-10-10T20:31:24.934340",
   "region": "경기",
   "total": 10,
   "items": [
-    {
-      "seq": "393376",
-      "title": "오백에 삼십",
-      "place": "JTN아트홀",
-      "startDate": "20151121",
-      "endDate": "20261231",
-      "fee": "",
-      "realm": "연극",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202608/a4629ff32ba140548694a7230176c392.jpg",
-      "phone": "",
-      "url": ""
-    },
     {
       "seq": "319005",
       "title": "패트릭 블랑: 수직정원",
@@ -150,6 +135,21 @@
       "lat": "",
       "lng": "",
       "thumbnail": "http://www.culture.go.kr/upload/rdf/24/07/show_202407816251114687.png",
+      "phone": "",
+      "url": ""
+    },
+    {
+      "seq": "219781",
+      "title": "이우환 공간 상설전시",
+      "place": "이우환 공간",
+      "startDate": "20230101",
+      "endDate": "20301231",
+      "fee": "",
+      "realm": "전시",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/22/08/show_2022082315161227864.png",
       "phone": "",
       "url": ""
     }

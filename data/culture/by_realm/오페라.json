@@ -1,8 +1,40 @@
 {
-  "updated": "2026-10-09T21:31:13.478117",
+  "updated": "2026-10-10T20:32:35.249262",
   "realm": "오페라",
-  "total": 0,
+  "total": 15,
   "items": [
+    {
+      "seq": "",
+      "title": "2026 서울어린이오페라페스티벌, 마법의 오페라 여행 Ⅱ",
+      "place": "소월아트홀(성동문화회관)",
+      "startDate": "20261011",
+      "endDate": "20261011",
+      "fee": "",
+      "realm": "오페라",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_202609162117835023.jpg",
+      "phone": "-",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76249",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 서울어린이오페라페스티벌, 그날의 기억",
+      "place": "소월아트홀(성동문화회관)",
+      "startDate": "20261011",
+      "endDate": "20261011",
+      "fee": "",
+      "realm": "오페라",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_202609162117917973.jpg",
+      "phone": "-",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76157",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
     {
       "seq": "",
       "title": "2026 성남아트센터 오페라 정원 <라 보엠>",

@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-09T21:31:14.397311",
+  "updated": "2026-10-10T20:32:37.966921",
   "realm": "아동가족",
-  "total": 0,
+  "total": 37,
   "items": [
     {
       "seq": "",
@@ -17,6 +17,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_202609022121126574.gif",
       "phone": "02-2088-4290",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75917",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "[성남] 2026 전국투어, 더:매직서커스",
+      "place": "한국잡월드",
+      "startDate": "20261005",
+      "endDate": "20261024",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091021231794933.png",
+      "phone": "070-7807-0701",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75798",
       "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -37,18 +53,18 @@
     },
     {
       "seq": "",
-      "title": "[성남] 2026 전국투어, 더:매직서커스",
-      "place": "한국잡월드",
-      "startDate": "20261005",
-      "endDate": "20261024",
+      "title": "2026 금천라이브 플러스 (하반기)",
+      "place": "금나래아트홀",
+      "startDate": "20261007",
+      "endDate": "20261008",
       "fee": "",
       "realm": "기타",
       "area": "",
       "lat": "",
       "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091021231794933.png",
-      "phone": "070-7807-0701",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75798",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091021182784969.gif",
+      "phone": "070-4172-4083",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75811",
       "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
@@ -66,22 +82,6 @@
       "phone": "02-2280-4114",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75838",
       "content": "찰나의 거품으로 빚어낸 순백의 세계,&nbsp;\n\n생성과 소멸의 순간을 시적으로 탐구하는 몽환적인 명상의 무대\n\n찰나에 피어났다 사라지는 비눗방울과 거품, 그 덧없고 신비로운 물질에서 시작된 &lt;소아페라, 인스톨레이션&gt;은 퍼포먼스와 설치 미술의 경계를 환상적으로 허무는 작품이다.&nbsp;\n\n&nbsp;\n\n공연이 시작되면 순백의 거품 세계가 무대를 가득 채운다. 이는 마치 우주의 기원이나 달 위의 풍경을 마주한 듯 신비롭고 비현실적인 풍경으로 관객을 초대한다. 무용수들은 이 완벽한 거품의 세계에 몸짓을 더해 숨결을 불어넣으며 천사, 괴물, 유령과 같은 환영적인 존재들을 끊임없이 생성하고 소멸시킨다. 이 신비로운 공간 속에서 거품 조형물들은 나타났다 사라지기를 반복한다.\n\n&nbsp;\n\n극이 전개될수록 이 경이로운 세계는 점차 형태를 감추고, 인간의 흔적과 오염으로 얼룩진 현대적 풍경으로 변모한다. 거품은 무대 위 오브제를 넘어 스스로 형태를 바꾸며 호흡하는 또 하나의 살아있는 배우가 된다. 무용수들은 거품과 하나의 유기체로 연결돼 한몸처럼 움직이며 관객을 시공간을 초월한 듯한 몽환적인 세계로 인도한다.\n\n&nbsp;\n\n시적이고 무용적인 명상을 선사하는 &lt;소아페라, 인스톨레이션&gt;은 생성과 소멸의 순간을 탐구하며 깊은 예술적 매혹을 남긴다."
-    },
-    {
-      "seq": "",
-      "title": "2026 금천라이브 플러스 (하반기)",
-      "place": "금나래아트홀",
-      "startDate": "20261007",
-      "endDate": "20261008",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091021182784969.gif",
-      "phone": "070-4172-4083",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=75811",
-      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
@@ -277,22 +277,6 @@
     },
     {
       "seq": "",
-      "title": "2026 광장 속 버스킹",
-      "place": "김포문화재단",
-      "startDate": "20260408",
-      "endDate": "20261028",
-      "fee": "",
-      "realm": "기타",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122489033.jpg",
-      "phone": "[홈페이지 내용 참고]",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71798",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "2026 광주시문화재단 하반기 프로그램 안내",
       "place": "광주시문화예술의전당",
       "startDate": "20260701",
@@ -321,6 +305,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061921175487678.gif",
       "phone": "02-2009-9700",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71816",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 광장 속 버스킹",
+      "place": "김포문화재단",
+      "startDate": "20260408",
+      "endDate": "20261028",
+      "fee": "",
+      "realm": "기타",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/07/rdf_202607022122489033.jpg",
+      "phone": "[홈페이지 내용 참고]",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71798",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
