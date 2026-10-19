@@ -1,24 +1,8 @@
 {
-  "updated": "2026-10-18T19:20:34.200530",
+  "updated": "2026-10-19T21:23:23.635828",
   "realm": "뮤지컬",
   "total": 20,
   "items": [
-    {
-      "seq": "",
-      "title": "[여수] 2026년 가족뮤지컬 \"겨울이야기\"",
-      "place": "여수시민회관 대공연장",
-      "startDate": "20261017",
-      "endDate": "20261017",
-      "fee": "",
-      "realm": "뮤지컬",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091821194884577.jpg",
-      "phone": "02-420-3005",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76673",
-      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
     {
       "seq": "",
       "title": "[서울 강북] 2026 가족 뮤지컬 이상한 나라의 앨리스",
@@ -34,6 +18,22 @@
       "phone": "안녕컴퍼니 070-8844-6413",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76679",
       "content": "앨리스는 애착 인형 토토와 함께 놀다 잠이든다.\n\n꿈속에서 만나 토토는 멋진 옷을 입고 앨리스에게 여행을 떠나자고 제안한다.\n\n여행중 토토의 회중 시계 소리를 듣고 이상한나라에 가서 여왕을 만난다.\n\n집에 가고 싶어하는 앨리스에게 여왕은 내기에서 이기면 집에 보내주겠다고 제안을 하는데..."
+    },
+    {
+      "seq": "",
+      "title": "[여수] 2026년 가족뮤지컬 \"겨울이야기\"",
+      "place": "여수시민회관 대공연장",
+      "startDate": "20261017",
+      "endDate": "20261017",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091821194884577.jpg",
+      "phone": "02-420-3005",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76673",
+      "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
       "seq": "",
@@ -149,22 +149,6 @@
     },
     {
       "seq": "",
-      "title": "2026 꿈꾸는극장, 동물원에 간 고양이",
-      "place": "꿈나무극장",
-      "startDate": "20260711",
-      "endDate": "20260711",
-      "fee": "",
-      "realm": "뮤지컬",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061221171147707.gif",
-      "phone": "02-830-2562",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71990",
-      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
-    },
-    {
-      "seq": "",
       "title": "[대전] 2026 베스트셀러 뮤지컬 <커다란 방귀>",
       "place": "대전평송청소년문화센터",
       "startDate": "20260711",
@@ -177,6 +161,22 @@
       "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_202606112124126458.gif",
       "phone": "070-7807-0701",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71983",
+      "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "2026 꿈꾸는극장, 동물원에 간 고양이",
+      "place": "꿈나무극장",
+      "startDate": "20260711",
+      "endDate": "20260711",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/06/rdf_2026061221171147707.gif",
+      "phone": "02-830-2562",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=71990",
       "content": "자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
     },
     {
