@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T21:33:27.308094",
+  "updated": "2026-10-29T21:41:52.305492",
   "realm": "뮤지컬",
   "total": 21,
   "items": [
@@ -21,22 +21,6 @@
     },
     {
       "seq": "",
-      "title": "[서울 강북] 2026 가족 뮤지컬 이상한 나라의 앨리스",
-      "place": "꿈의숲아트센터 퍼포먼스홀",
-      "startDate": "20261017",
-      "endDate": "20261018",
-      "fee": "",
-      "realm": "뮤지컬",
-      "area": "",
-      "lat": "",
-      "lng": "",
-      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091821201679663.gif",
-      "phone": "안녕컴퍼니 070-8844-6413",
-      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76679",
-      "content": "앨리스는 애착 인형 토토와 함께 놀다 잠이든다.\n\n꿈속에서 만나 토토는 멋진 옷을 입고 앨리스에게 여행을 떠나자고 제안한다.\n\n여행중 토토의 회중 시계 소리를 듣고 이상한나라에 가서 여왕을 만난다.\n\n집에 가고 싶어하는 앨리스에게 여왕은 내기에서 이기면 집에 보내주겠다고 제안을 하는데..."
-    },
-    {
-      "seq": "",
       "title": "[여수] 2026년 가족뮤지컬 \"겨울이야기\"",
       "place": "여수시민회관 대공연장",
       "startDate": "20261017",
@@ -50,6 +34,22 @@
       "phone": "02-420-3005",
       "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76673",
       "content": "&nbsp;\n자세한 정보는 '바로가기' 링크를 통해 확인하시기 바랍니다."
+    },
+    {
+      "seq": "",
+      "title": "[서울 강북] 2026 가족 뮤지컬 이상한 나라의 앨리스",
+      "place": "꿈의숲아트센터 퍼포먼스홀",
+      "startDate": "20261017",
+      "endDate": "20261018",
+      "fee": "",
+      "realm": "뮤지컬",
+      "area": "",
+      "lat": "",
+      "lng": "",
+      "thumbnail": "http://www.culture.go.kr/upload/rdf/26/09/rdf_2026091821201679663.gif",
+      "phone": "안녕컴퍼니 070-8844-6413",
+      "url": "https://www.mcst.go.kr/kor/s_culture/culture/cultureView.jsp?pSeq=76679",
+      "content": "앨리스는 애착 인형 토토와 함께 놀다 잠이든다.\n\n꿈속에서 만나 토토는 멋진 옷을 입고 앨리스에게 여행을 떠나자고 제안한다.\n\n여행중 토토의 회중 시계 소리를 듣고 이상한나라에 가서 여왕을 만난다.\n\n집에 가고 싶어하는 앨리스에게 여왕은 내기에서 이기면 집에 보내주겠다고 제안을 하는데..."
     },
     {
       "seq": "",
