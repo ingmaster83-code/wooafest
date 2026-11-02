@@ -31,6 +31,13 @@ jobs:
         env:
           KAKAO_MAP_KEY: ${{ secrets.KAKAO_MAP_KEY }}
 
+      - name: 화면용 데이터 동기화 (docs/data)
+        # 메인 페이지·캘린더는 docs/data 를 읽는다. 수집은 data/ 에만 저장하므로 복사해 줘야 최신 상태가 반영된다.
+        run: |
+          mkdir -p docs/data/culture
+          cp data/festival.json docs/data/festival.json
+          cp -r data/culture/. docs/data/culture/
+
       - name: 변경사항 커밋 & 푸시
         run: |
           git config user.email "action@github.com"
